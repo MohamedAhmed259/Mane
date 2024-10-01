@@ -1,2 +1,1 @@
-﻿# mane_website
- https://mahmoud-abdelkarim777.github.io/mane_website/
+https://mohamedahmed259.github.io/Mane/
