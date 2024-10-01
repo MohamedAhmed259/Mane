@@ -1,2 +1,0 @@
-﻿# mane_website
- https://mahmoud-abdelkarim777.github.io/mane_website/
