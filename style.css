@@ -156,3 +156,18 @@ footer a:hover {
     animation: scaleAnimation 1s ease-in-out infinite; /* Adjust duration and easing as needed */
 }
 
+/* تظبيط شريط السنايبر */
+.logo-img {
+    width: 100%;
+    height: 150px; /* يمكنك تعديل الارتفاع حسب الحاجة */
+    object-fit: contain; /* لضمان الحفاظ على نسبة العرض إلى الارتفاع */
+    display: block;
+    margin: 0 auto; /* لتوسيط الصورة داخل السلايد */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* لضبط ارتفاع الـ slide */
+}
