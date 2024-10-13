@@ -144,6 +144,27 @@ nav a:hover {
 }
 /* end who are we  */
 /* start new service */
+.service .content .row p{
+    text-align: justify;
+}
+
+/* lg screen  */
+@media (min-width: 992px) {
+    .service .content .row article{
+        width: 30%;
+        height: 320px;
+        text-align: justify;
+    }
+}
+/* md screen  */
+@media (max-width: 992px) {
+    .service .content .row article{
+        width: 45%;
+        height: 280px;
+        text-align: justify;
+    }
+}
+/* sm screen  */
 @media (max-width: 768px) {
     .service .content .row{
         display: none;
