@@ -170,6 +170,14 @@ nav a:hover {
         display: none;
     }
 }
+@media (min-width: 768px) {
+    .service .content .swiper{
+        display: none;
+    }
+}
+
+
+
 /* end new service */
 #btn-2{
     background-color: white;
