@@ -25,35 +25,67 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div dir="rtl" class="container-fluid">
-                <!-- logo -->
-                <img src="./img/logo.svg" width="80px" alt="foto">
-                <button class="navbar-toggler" id="toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <!-- Logo -->
+                <img src="./img/logo.svg" class="image1" width="80px" alt="foto">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span><img src="./img/menu.png" alt=""></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item" style="order: 1;">
-                            <a class="nav-link active fw-bold" aria-current="page" href="#home">الرئيسية</a>
-                        </li>
-                        <li class="nav-item" style="order: 2;">
-                            <a class="nav-link fw-bold" href="#about">من نحن</a>
-                        </li>
-                        <li class="nav-item" style="order: 3;">
-                            <a class="nav-link fw-bold" href="#services">خدماتنا</a>
-                        </li>
-                        <li class="nav-item" style="order: 4;">
-                            <a class="nav-link fw-bold" href="#contact">تواصل معنا</a>
-                        </li>
-                    </ul>
+                <ul class="navbar-nav list">
+                    <li class="nav-item" style="order: 1;">
+                        <a class="nav-link active fw-bold" aria-current="page" href="#home">الرئيسية</a>
+                    </li>
+                    <li class="nav-item" style="order: 2;">
+                        <a class="nav-link fw-bold" href="#about">من نحن</a>
+                    </li>
+                    <li class="nav-item" style="order: 3;">
+                        <a class="nav-link fw-bold" href="#services">خدماتنا</a>
+                    </li>
+                    <li class="nav-item" style="order: 4;">
+                        <a class="nav-link fw-bold" href="#contact">تواصل معنا</a>
+                    </li>
+                </ul>
+                <img src="./img/logo-md.png" class="image2" alt="foto">
+                <div id="bot1">
+                    <div class="d-inline d-lg -none text-info" onclick="toggleLanguage()">en</div>
+                    <div class="d-sm- none d-lg- inline text-info d-none" onclick="toggleLanguage()">English</div>
+                    <img src="./img/globe.png" class="bg-info ms-4 rounded" width="25px" alt="photo">
+                    <a href="" id="talk-us" class="p-2 px-5 bg-info text-dark rounded text-decoration-none">تحدث معنا</a>
                 </div>
             </div>
         </nav>
+        <!-- Offcanvas Sidebar -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">القائمة</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold" aria-current="page" href="#home">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#about">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#services">خدماتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#contact">تواصل معنا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center flex-column align-items-center mt-4 w-100">
+            <p class=" text-center f s-2  p-3 px-lg-5 m-0">نقف بجانبك بخبرةٍ تعزز حقوقك والتزامٍ يحقق لك العدالة</p>
+            <a href="" class="p-2 px-5 rounded text-decoration-none">تصفح موقعنا الآن</a>
+        </div>
     </header>
     <!-- end header  -->
     <!-- start hero  -->
     <section id="home" class="hero mt-4 ">
         <div class="d-flex flex-column align-items-center gap-3">
-            <img class="w-100" src="./img/تعديل صثلا.jpg" alt="">
+            <!-- <img class="w-100" src="./img/تعديل صثلا.jpg" alt=""> -->
             <a href="./cv/profile company .pdf" download class="p-3 rounded" id="btn">
                 <i class="fas fa-download"></i> تحميل الملف التعريفي
             </a>
@@ -144,10 +176,54 @@
             </swiper-slide>
         </swiper-container>
     </section>
-    
-    
-    
     <!-- end hero  -->
+    <!--start Who are we -->
+    <section id="who " class="who container-fluid position-relative bg-info">
+        <div class="row align-items-center ">
+            <div class="col-12 col-md-6 col-lg-6 d-flex justify-content-center ">
+                <img src="./img/Layer 1.png" alt="photo">
+            </div>
+            <div class="col-12 col-md-6 col-lg-6 d-flex flex-column justify-content-between gap-5 ">
+                <div>
+                    <h1>من <span class="word-color">نحن</span></h1>
+                    <p class="line"></p>
+                </div>
+                <p class="m-0 w-75">تأسســـت شركــــة "ماني للمحامــــاة" عـام
+                    1441 هــ بهـــدف تقــــديـم خـدمــــــــات قانـونيــــــة متكــامـلـــــة
+                    تـــواكــــب التـطــــــورات القانونيـــــــة المحــليــــة والــدوليـــة
+                    . على مــدى السنـــــوات الماضيـــــة، اسـتطــــاعـت الشـركـــــة أن تـبنـــــي
+                    سـمعــــة قوية كشـــريك موثــــوق للعمــلاء من مختلـــــف
+                    القـطــــاعـــات، بـمــا فــي ذلـــك الشــــركـــات الكبيـــــرة، الأفــراد، والـمـؤسســات
+                    الحكـوميــة فـضــل فـــريـق مــن المحامين ذوي الخبرة الواسعة
+                    ، حيث تصل خبرات المحامين إلى 10 سنوات فـي مجـالات قانونيـة متـعـددة، تمـيـزت
+                    "ماني" بتقـديـم حلـول قانونيـة مبتكـرة وفعّالة تلبي احتياجات عملائها.  <a href="">أقرأ المزيد</a>.
+                </p>
+                <div>
+                    <a href="">عرض ملف الشركة</a>
+                </div>
+            </div>
+        </div>
+        <img src="./img/Group 464.png" class="position-absolute bottom-0" width="80px" alt="photo">
+    </section>
+    <!--end Who are we -->
+    <!-- start new  services -->
+    <section id="service" class="service">
+        <div class="content">
+            <div>
+                <h1 class="fw-bold">خدماتنا <span class="word-color">القانونية</span></h1>
+                <p class="line"></p>
+            </div>
+            <div class="row">
+                <article class="col-md-6 col-lg-4">asd</article>
+                <article class="col-md-6 col-lg-4">asd</article>
+                <article class="col-md-6 col-lg-4">asd</article>
+                <article class="col-md-6 col-lg-4">asd</article>
+                <article class="col-md-6 col-lg-4">asd</article>
+            </div>
+            
+        </div>
+    </section>
+    <!-- end new  services -->
     <!-- start hero two  -->
     <section class="container mt-4 p-4 rounded text-center" id="hero-two">
         <div class="d-flex justify-content-center align-items-center">

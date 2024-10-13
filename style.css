@@ -3,6 +3,14 @@
     margin: 0;
     box-sizing: border-box;
 }
+.line{
+    height: 2px;
+    width: 80px;
+    background-color: black;
+}
+.word-color{
+    color: #5958B5;
+}
 html{
     scroll-behavior: smooth;
     /* overflow-x: hidden; */
@@ -14,13 +22,90 @@ body {
     background-color: #f5f5f5;
 }
 header {
+    background-image: url(./img/image\ 1.png);
+    background-size: cover;
     background-color: #322e76;
     text-align: center;
+    height: 675px;
     /* position: fixed; */
     /* width: 100%; */
 }
-header #toggle {
+.offcanvas {
+    width: 250px; /* Adjust the width as needed */
+}
+/* header #toggle {
     background-color: white;
+} */
+@media (max-width: 992px) {
+    .navbar .container-fluid .image1{
+        display: none !important;
+    }
+}
+@media (min-width: 992px) {
+    .navbar .container-fluid .image2{
+        display: none !important;
+    }
+}
+@media (min-width: 767px) {
+    header .d-flex p{
+        margin-top: 3rem !important;
+        color: white;
+        width: 70% !important;
+        font-size: 62px;
+    }
+    header .d-flex a{
+        color: white;
+    }
+}
+/* md screen */
+@media (max-width: 992px) {
+    header{
+        height: 390px;
+    }
+    .navbar .container-fluid .list{
+        display: none;
+    }
+    .navbar .container-fluid .image2{
+        width: 80px;
+    }
+    .navbar .container-fluid div #talk-us{
+        display: inline-block;
+        width: 114px !important;
+        padding: 5px 10px !important;
+        font-size: 14px;
+    }
+    .navbar .container-fluid #bot2{
+        display: none;
+    }
+}
+/* sm screen */
+@media (max-width: 767px) {
+    header{
+        height: 207px;
+    }
+    header .d-flex{
+        margin-top: 5px !important;
+    }
+    header .d-flex p{
+        color: white;
+        font-size: 19px !important;
+    }
+    header .d-flex a{
+        color: white;
+        font-size: 14px !important;
+    }
+    .navbar .container-fluid .image2{
+        width: 60px;
+    }
+    .navbar .container-fluid div #talk-us{
+        display: inline-block;
+        width: 88px !important;
+        padding: 5px 10px !important;
+        font-size: 12px;
+    }
+    .navbar .container-fluid #bot1 img{
+        margin: 0 !important;
+    }
 }
 header nav div ul li a{
     color: white !important;
@@ -33,6 +118,38 @@ nav a:hover {
     background-color: #322e76;
     color: white;
 }
+/* start who are we  */
+.who{
+    overflow: hidden;
+}
+.who .position-absolute{
+    left: 3%;
+}
+.who .row div p{
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .who .row div img{
+        display: none;
+    }
+    .who .position-absolute{
+        left: 3%;
+        bottom: -210px !important;
+    }
+    .who .row div p{
+        width: 100% !important;
+        text-align: justify;
+    }
+}
+/* end who are we  */
+/* start new service */
+@media (max-width: 768px) {
+    .service .content .row{
+        display: none;
+    }
+}
+/* end new service */
 #btn-2{
     background-color: white;
     color: black;
