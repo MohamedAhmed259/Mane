@@ -4,12 +4,12 @@
     box-sizing: border-box;
 }
 .line{
-    height: 2px;
-    width: 80px;
-    background-color: black;
+    height: 2px !important;
+    width: 80px !important;
+    background-color: #5958B5;
 }
 .word-color{
-    color: #5958B5;
+    color: #5958B5 !important;
 }
 html{
     scroll-behavior: smooth;
@@ -30,8 +30,29 @@ header {
     /* position: fixed; */
     /* width: 100%; */
 }
+
+header .offcanvas{
+    background-color: #EFF1FF !important;
+}
+header .offcanvas .offcanvas-header h5{
+    color: #5958B5 ;
+}
+header .offcanvas ul li a{
+    color: #5958B5 ;
+}
+header .navbar .container-fluid #bot1{ 
+    color: white;
+}
+header .navbar .container-fluid #bot1 #talk-us{
+    border: 1px solid white;
+    color: white;
+}
 .offcanvas {
     width: 250px; /* Adjust the width as needed */
+}
+header .txt a{
+    background-color: white;
+    color: #2F2B73;
 }
 /* header #toggle {
     background-color: white;
@@ -42,8 +63,23 @@ header {
     }
 }
 @media (min-width: 992px) {
+    header .navbar .container-fluid #bot1 #lang-1{
+        display: none;
+    }
+    header .navbar .container-fluid #bot1 #lang-2{
+        display: inline;
+    }
     .navbar .container-fluid .image2{
         display: none !important;
+    }
+
+}
+@media (min-width: 992px) {
+    header .d-flex p{
+        margin-top: 3rem !important;
+        color: white;
+        width: 70% !important;
+        font-size: 62px;
     }
 }
 @media (min-width: 767px) {
@@ -51,16 +87,19 @@ header {
         margin-top: 3rem !important;
         color: white;
         width: 70% !important;
-        font-size: 62px;
-    }
-    header .d-flex a{
-        color: white;
+        font-size: 40px;
     }
 }
 /* md screen */
 @media (max-width: 992px) {
     header{
         height: 390px;
+    }
+    header .navbar .container-fluid #bot1 #lang-1{
+        display: inline;
+    }
+    header .navbar .container-fluid #bot1 #lang-2{
+        display: none;
     }
     .navbar .container-fluid .list{
         display: none;
@@ -83,6 +122,9 @@ header {
     header{
         height: 207px;
     }
+    header .navbar .container-fluid #bot1 #talk-us{
+        display: none;
+    }
     header .d-flex{
         margin-top: 5px !important;
     }
@@ -91,7 +133,6 @@ header {
         font-size: 19px !important;
     }
     header .d-flex a{
-        color: white;
         font-size: 14px !important;
     }
     .navbar .container-fluid .image2{
@@ -121,6 +162,9 @@ nav a:hover {
 /* start who are we  */
 .who{
     overflow: hidden;
+    background-image: url(./img/who\ we\ are.png);
+    background-size: cover;
+    /* background-color: #EFF1FF; */
 }
 .who .position-absolute{
     left: 3%;
@@ -129,6 +173,13 @@ nav a:hover {
     text-align: justify;
 }
 
+.who .row .info-company  .txt a{
+    color: #2F2B73 !important;
+}
+.who .row .info-company  .show a{
+    background-color: #2F2B73;
+    color: white;
+}
 @media (max-width: 768px) {
     .who .row div img{
         display: none;
@@ -137,7 +188,7 @@ nav a:hover {
         left: 3%;
         bottom: -210px !important;
     }
-    .who .row div p{
+    .who .row .info-company  .txt{
         width: 100% !important;
         text-align: justify;
     }
@@ -147,7 +198,18 @@ nav a:hover {
 .service .content .row p{
     text-align: justify;
 }
+.service .content .row a{
+    color: #2F2B73;
+}
+.swiper a{
+    color: #2F2B73;
+    border-color: #2F2B73 !important;
+}
 
+.service .show a{
+    background-color: #2F2B73;
+    color: white;
+}
 /* lg screen  */
 @media (min-width: 992px) {
     .service .content .row article{
@@ -175,10 +237,21 @@ nav a:hover {
         display: none;
     }
 }
-
-
-
 /* end new service */
+/* start hero two */
+.hero-two{
+    background-image: url(./img/Background\ pattern.svg);
+    background-size: cover;
+}
+.hero-two p{
+    width: 706px;
+}
+@media (max-width: 767px) {
+    .hero-two p{
+        width: 100%;
+    }
+}
+/* end hero two */
 #btn-2{
     background-color: white;
     color: black;
@@ -235,12 +308,18 @@ nav a:hover {
 .contact-us i:hover {
     color: #322e76; /* This will override the original icon color */
 }
-
+/* start footer  */
 footer {
+    background-image: url(./img/footer.svg);
+    background-size: cover;
     background-color: #322e76;
     color: #fff;
-    text-align: center;
     padding: 20px;
+}
+@media (max-width: 767px) {
+    footer .row #quick-links{
+        display: none;
+    }
 }
 footer p{
     color: #fff;
@@ -251,6 +330,7 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+/* end footer  */
 .services-container {
     display: flex; 
     overflow-x: auto; 
@@ -301,35 +381,3 @@ footer a:hover {
 .animat {
     animation: scaleAnimation 1s ease-in-out infinite; /* Adjust duration and easing as needed */
 }
-
-/* تظبيط شريط السنايبر */
-/* لضبط الديف المحيط بالصورة */
-/* ضبط الديف المحيط بالصورة */
-.image-container {
-    width: 200px; /* العرض الثابت لكل ديف */
-    height: 200px; /* الارتفاع الثابت لكل ديف */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* لإخفاء أي جزء زائد من الصورة */
-    margin: 0 auto; /* توسيط الديف داخل السلايد */
-    background-color: #f7f7f7; /* لون خلفية ليظهر اختلاف الأبعاد */
-}
-
-/* ضبط حجم الصورة داخل كل ديف */
-.image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* لضمان أن الصورة تناسب الديف دون تشويه */
-}
-
-
-/* ضبط الـ swiper-slide لتتناسب مع حجم الصور */
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px; /* إضافة بعض التباعد الداخلي */
-    height: auto; /* السماح للارتفاع بالتكيف مع المحتوى */
-}
-
