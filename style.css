@@ -339,10 +339,7 @@ footer a:hover {
     padding-bottom: 20px; 
 }
 
-#services {
-    overflow-x: hidden; /* لمنع التمرير غير المرغوب خارج الحاوية */
-    padding-top: 20px; /* لإضافة مسافة من الأعلى */
-}
+
 .icon-box {
     width: 60px;
     height: 60px;
