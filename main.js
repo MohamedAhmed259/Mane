@@ -166,6 +166,10 @@ const translations = {
     }
 };
 
+(function localSrorage(params) {
+    localStorage.setItem("language", "ar");
+})();
+
 const setLanguage = (language) => {
     const elements = document.querySelectorAll("[data-attr]");
     elements.forEach((element) => {
