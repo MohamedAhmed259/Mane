@@ -166,7 +166,7 @@ const translations = {
     }
 };
 
-(function localSrorage(params) {
+(function localSrorage() {
     localStorage.setItem("language", "ar");
 })();
 
