@@ -16,16 +16,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- external css file  -->
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="./script.js"></script> -->
+    
+    <!-- swiper install -->
+    
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <title>شركة ماني للمحاماة</title>
 </head>
-<body>
+<body >
     <!-- start header  -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div dir="rtl" class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container-fluid justify-content-around ">
                 <!-- Logo -->
                 <img src="./img/logo.svg" class="image1" width="80px" alt="foto">
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -86,28 +90,32 @@
                 </ul>
             </div>
         </div>
+        
         <div class="d-flex justify-content-center flex-column align-items-center mt-4 w-100 txt">
-            <p id="home" class="text-center f s-2 p-3 px-lg-5 m-0" data-attr="tagline">نقف بجانبك بخبرةٍ تعزز حقوقك والتزامٍ يحقق لك العدالة</p>
-            <a href="https://www.mani-law.com/" target="_blank" class="p-2 px-4 rounded text-decoration-none fw-bold" data-attr="browse-now">تصفح موقعنا الآن</a>
+            <p id="home" class="text-center  p-3 px-lg-5 m-0 fw-bold " data-attr="tagline">نقف بجانبك بخبرةٍ تعزز حقوقك والتزامٍ يحقق لك العدالة</p>
+            <a href="https://www.mani-law.com/" target="_blank" class="p-2 px-5 rounded text-decoration-none fw-bold" data-attr="browse-now">تصفح موقعنا الآن</a>
         </div>
     </header>
     <!-- end header  -->
     <!--start Who are we -->
     <section id="about" class="who container-fluid mt-5 mb-2 p-3 pb-5">
-        <div class="row align-items-center">
-            <div class="col-12 col-md-6 col-lg-6 d-flex justify-content-center">
-                <img src="./img/Layer 1.png" class="p-3" alt="photo">
+        <div class="row justify-content-around align-items-center">
+            <div class="col-12 col-md-5 col-lg-5 d-flex justify-content-center">
+                <img src="./img/Layer 1.png" class="p-3 w-100" alt="photo">
             </div>
-            <div class="info-company col-12 col-md-6 col-lg-6 d-flex flex-column justify-content-between">
+            <div class="info-company col-12 col-md-5 col-lg-5 d-flex flex-column justify-content-between">
                 <div>
-                    <h1 class="p-3 m-0 fw-bold" data-attr="about-title">من <span class="word-color" data-attr="about-highlight">نحن</span></h1>
+                    <h1 class="p-3 m-0 fw-bold" data-attr="about-title">من <span class="word-color">نحن</span></h1>
                     <p class="line m-0 mx-3" data-attr="about-line"></p>
                 </div>
-                <p class="txt m-0 w-75 p-3 fw-bold" data-attr="about-description">
-                    تأسســـت شركــــة "ماني للمحامــــاة" عام 1441 هـ بهـــدف تقــــديم خدمــــــــات قانونيــــــة متكاملـــــة تواكــــب التطــــــورات القانونيـــــــة المحليــــة والدولية. على مدى السنــــوات الماضيــــة، استطــــاعت الشركـــة أن تبنـــي سمعـــة قوية كشـــريك موثــــوق للعمــلاء من مختلـــــف القطــــاعـــات، بما في ذلك الشــــركــات الكبيــــرة، الأفراد، والمؤسسات الحكومية...  <a href="" data-attr="read-more"> أقرأ المزيد</a>
+                <p  class="txt m-0 w-lg-75 p-3 pb-0 fs-5" data-attr="about-description">
+                    تأسســـت شركــــة "ماني للمحامــــاة" عام 1441 هـ بهـــدف تقــــديم خدمــــــــات قانونيــــــة متكاملـــــة تواكــــب التطــــــورات القانونيـــــــة المحليــــــة والدولية. على مدى السنــــوات الماضيــــة، استطــــاعت الشركـــة
+                    أن تبنـــي سمعـــة قوية كشـــريك موثــــوق للعمــلاء من مختلـــــف القطــــاعـــات
+                    ، بما في ذلك الشــــركــات الكبيــــرة، الأفراد، والمؤسسات الحكومية...
                 </p>
+                <a class="px-3" id="toggleBtn-1" data-attr="read-more"></a>
                 <div class="show mt-3 px-3">
-                    <a href="./cv/profile company .pdf" download class="fw-bold p-2 px-3 rounded text-decoration-none" data-attr="view-profile">عرض ملف الشركة</a>
+                    <a href="./cv/profile company .pdf" download class="fw-bold p-2 px-5 rounded text-decoration-none" data-attr="view-profile">عرض ملف الشركة</a>
                 </div>
             </div>
         </div>
@@ -115,7 +123,7 @@
     <!--end Who are we -->
     <!-- start services -->
     <section id="services" class="service container-fluid mb-5 py-4">
-        <div class="content">
+        <div class="content" dir="auto">
             <div class="mx-3">
                 <h1 class="fw-bold" data-attr="services-title">خدماتنا <span class="word-color" data-attr="services-highlight">القانونية</span></h1>
                 <p class="line"></p>
@@ -130,7 +138,7 @@
                         <p data-attr="service-1-description">تقديم خدمات الترافع أمام المحاكم والهيئات القضائية، وحل النزاعات بين الأطـراف بطـرق قانونية تشمل التحكيم والوساطة.</p>
                     </div>
                     <div>
-                        <a href="https://maniksa.com/mani-law-firm/" target="_blank" class="text-decoration-none border-bottom border-dark p-1" data-attr="service-1-link">أعرف المزيد عن الخدمة </a>
+                        <a href="https://maniksa.com/mani-law-firm/" target="_blank" class=" p-1" data-attr="service-1-link">أعرف المزيد عن الخدمة </a>
                     </div>
                 </article>
                 <article class="d-flex justify-content-between border flex-column p-3">
@@ -142,7 +150,7 @@
                         <p data-attr="service-2-description">تقديم المشورة القانونية لتأسيس الشركات المحليـة والدوليـة، ودعـم الاستثمـارات داخـل المملكـة بمـا يتـوافـق مـع القـوانيـن واللـوائــح.</p>
                     </div>
                     <div>
-                        <a href="https://maniksa.com/mani-law-firm/" target="_blank" class="text-decoration-none border-bottom border-dark p-1" data-attr="service-2-link">أعرف المزيد عن الخدمة </a>
+                        <a href="https://maniksa.com/mani-law-firm/" target="_blank" class=" p-1" data-attr="service-2-link">أعرف المزيد عن الخدمة </a>
                     </div>
                 </article>
                 <article class="d-flex justify-content-between border flex-column p-3">
@@ -154,7 +162,7 @@
                         <p data-attr="service-3-description">توفير استشارات قانونية دقيقة، بالإضافة إلى إعــداد الـدراســات القـانـونيــة التـي تـدعـم اتخــاذ قـرارات قانونيـة صحيحـة.</p>
                     </div>
                     <div>
-                        <a href="https://maniksa.com/mani-law-firm/" target="_blank" class="text-decoration-none border-bottom border-dark p-1" data-attr="service-3-link">أعرف المزيد عن الخدمة </a>
+                        <a href="https://maniksa.com/mani-law-firm/" target="_blank" class=" p-1" data-attr="service-3-link">أعرف المزيد عن الخدمة </a>
                     </div>
                 </article>
                 <article class="d-flex justify-content-between border flex-column p-3">
@@ -166,7 +174,7 @@
                         <p data-attr="service-4-description">مساعدة العملاء في حماية حقوقهم المتعلقة بـالـمـلكــيــة الفكـــريـة، مـثـل تســجـيــل العــلامــــات التجـارية وبـراءات الاخـتراع.</p>
                     </div>
                     <div>
-                        <a href="https://maniksa.com/mani-law-firm/" target="_blank" class="text-decoration-none border-bottom border-dark p-1" data-attr="service-4-link">أعرف المزيد عن الخدمة </a>
+                        <a href="https://maniksa.com/mani-law-firm/" target="_blank" class=" p-1" data-attr="service-4-link">أعرف المزيد عن الخدمة </a>
                     </div>
                 </article>
                 <article class="d-flex justify-content-between border flex-column p-3">
@@ -178,7 +186,7 @@
                         <p data-attr="service-5-description">تمثيل العملاء أمام المحاكـم في مختـلـف القضايا القانونية وتقديم الدفاع القانوني عـن حقوقهـم.</p>
                     </div>
                     <div>
-                        <a href="https://maniksa.com/mani-law-firm/" target="_blank" class="mt-4 text-decoration-none border-bottom border-dark p-1" data-attr="service-5-link">أعرف المزيد عن الخدمة </a>
+                        <a href="https://maniksa.com/mani-law-firm/" target="_blank" class="mt-4  p-1" data-attr="service-5-link">أعرف المزيد عن الخدمة </a>
                     </div>
                 </article>
                 <article class="d-flex justify-content-between border flex-column p-3">
@@ -190,13 +198,14 @@
                         <p data-attr="service-6-description">قديم المشورة القانونية في صفقات العقارات والمقـاولات، بما في ذلك شراء وبيـع العقارات وتنفيـذ عقـود البنـاء والتطـوير.</p>
                     </div>
                     <div>
-                        <a href="https://maniksa.com/mani-law-firm/" target="_blank" class="text-decoration-none border-bottom border-dark p-1" data-attr="service-6-link">أعرف المزيد عن الخدمة </a>
+                        <a href="https://maniksa.com/mani-law-firm/" target="_blank" class=" p-1" data-attr="service-6-link">أعرف المزيد عن الخدمة </a>
                     </div>
                 </article>
             </div>
             <div class="mt-5 mx-3 swiper">
                 <swiper-container
-                    class="mySwiper" 
+                id="service-swiper"
+                    class="mySwiper"
                     loop="true" 
                     speed="800" 
                     space-between="30"
@@ -213,8 +222,9 @@
                             "slidesPerView": 4
                         }
                     }'
+                    
                 >
-                    <swiper-slide style="height: 300px;">
+                    <swiper-slide style="height: 360px;">
                         <article class="d-flex justify-content-between gap-2 border flex-column p-3">
                             <div>
                                 <img src="./img/service-1.png" alt="photo">
@@ -224,11 +234,11 @@
                                 <p data-attr="swiper-service-1-description">تقديم خدمات الترافع أمام المحاكم والهيئات القضائية، وحل النزاعات بين الأطـراف بطـرق قانونية تشمل التحكيم والوساطة.</p>
                             </div>
                             <div>
-                                <a href="https://maniksa.com/mani-law-firm/" target="_blank" class="text-decoration-none border-bottom border-dark p-1" data-attr="swiper-service-1-link">أعرف المزيد عن الخدمة </a>
+                                <a href="https://maniksa.com/mani-law-firm/" target="_blank" class=" p-1" data-attr="swiper-service-1-link">أعرف المزيد عن الخدمة </a>
                             </div>
                         </article>
                     </swiper-slide>
-                    <swiper-slide>
+                    <swiper-slide style="height: 360px;">
                         <article class="d-flex justify-content-between gap-2 border flex-column p-3">
                             <div>
                                 <img src="./img/service-2.png" alt="photo">
@@ -238,11 +248,11 @@
                                 <p data-attr="swiper-service-2-description">تقديم المشورة القانونية لتأسيس الشركات المحليـة والدوليـة، ودعـم الاستثمـارات داخـل المملكـة بمـا يتـوافـق مـع القـوانيـن واللـوائــح.</p>
                             </div>
                             <div>
-                                <a href="https://maniksa.com/mani-law-firm/" target="_blank" class="text-decoration-none border-bottom border-dark p-1" data-attr="swiper-service-2-link">أعرف المزيد عن الخدمة </a>
+                                <a href="https://maniksa.com/mani-law-firm/" target="_blank" class=" p-1" data-attr="swiper-service-2-link">أعرف المزيد عن الخدمة </a>
                             </div>
                         </article>
                     </swiper-slide>
-                    <swiper-slide>
+                    <swiper-slide style="height: 360px;">
                         <article class="d-flex justify-content-between gap-2 border flex-column p-3">
                             <div>
                                 <img src="./img/service-3.png" alt="photo">
@@ -252,11 +262,11 @@
                                 <p data-attr="swiper-service-3-description">توفير استشارات قانونية دقيقة، بالإضافة إلى إعــداد الـدراســات القـانـونيــة التـي تـدعـم اتخــاذ قـرارات قانونيـة صحيحـة.</p>
                             </div>
                             <div>
-                                <a href="https://maniksa.com/mani-law-firm/" target="_blank" class="text-decoration-none border-bottom border-dark p-1" data-attr="swiper-service-3-link">أعرف المزيد عن الخدمة </a>
+                                <a href="https://maniksa.com/mani-law-firm/" target="_blank" class=" p-1" data-attr="swiper-service-3-link">أعرف المزيد عن الخدمة </a>
                             </div>
                         </article>
                     </swiper-slide>
-                    <swiper-slide>
+                    <swiper-slide style="height: 360px;">
                         <article class="d-flex justify-content-between gap-2 border flex-column p-3">
                             <div>
                                 <img src="./img/service-4.png" alt="photo">
@@ -266,11 +276,11 @@
                                 <p data-attr="swiper-service-4-description">مساعدة العملاء في حماية حقوقهم المتعلقة بـالـمـلكــيــة الفكـــريـة، مـثـل تســجـيــل العــلامــــات التجـارية وبـراءات الاخـتراع.</p>
                             </div>
                             <div>
-                                <a href="https://maniksa.com/mani-law-firm/" target="_blank" class="text-decoration-none border-bottom border-dark p-1" data-attr="swiper-service-4-link">أعرف المزيد عن الخدمة </a>
+                                <a href="https://maniksa.com/mani-law-firm/" target="_blank" class="   p-1" data-attr="swiper-service-4-link">أعرف المزيد عن الخدمة </a>
                             </div>
                         </article>
                     </swiper-slide>
-                    <swiper-slide>
+                    <swiper-slide style="height: 360px;">
                         <article class="d-flex justify-content-between gap-2 border flex-column p-3">
                             <div>
                                 <img src="./img/service-5.png" alt="photo">
@@ -280,11 +290,11 @@
                                 <p data-attr="swiper-service-5-description">تمثيل العملاء أمام المحاكـم في مختـلـف القضايا القانونية وتقديم الدفاع القانوني عـن حقوقهـم.</p>
                             </div>
                             <div>
-                                <a href="https://maniksa.com/mani-law-firm/" target="_blank" class="text-decoration-none border-bottom border-dark p-1" data-attr="swiper-service-5-link">أعرف المزيد عن الخدمة </a>
+                                <a href="https://maniksa.com/mani-law-firm/" target="_blank" class=" p-1" data-attr="swiper-service-5-link">أعرف المزيد عن الخدمة </a>
                             </div>
                         </article>
                     </swiper-slide>
-                    <swiper-slide>
+                    <swiper-slide style="height: 360px;">
                         <article class="d-flex justify-content-between gap-2 border flex-column p-3">
                             <div>
                                 <img src="./img/service-6.png" alt="photo">
@@ -294,14 +304,14 @@
                                 <p data-attr="swiper-service-6-description">قديم المشورة القانونية في صفقات العقارات والمقـاولات، بما في ذلك شراء وبيـع العقارات وتنفيـذ عقـود البنـاء والتطـوير.</p>
                             </div>
                             <div>
-                                <a href="https://maniksa.com/mani-law-firm/" target="_blank" class="text-decoration-none border-bottom border-dark p-1" data-attr="swiper-service-6-link">أعرف المزيد عن الخدمة </a>
+                                <a href="https://maniksa.com/mani-law-firm/" target="_blank" class=" p-1" data-attr="swiper-service-6-link">أعرف المزيد عن الخدمة </a>
                             </div>
                         </article>
                     </swiper-slide>
                 </swiper-container>
             </div>
             <div class="show d-flex justify-content-center align-items-center ">
-                <a href="https://maniksa.com/mani-law-firm/" target="_blank" class="text-decoration-none p-2 rounded" data-attr="view-all-services">عرض جميع الخدمات</a>
+                <a href="https://maniksa.com/mani-law-firm/" target="_blank" class="text-decoration-none p-2 px-5 rounded" data-attr="view-all-services">عرض جميع الخدمات</a>
             </div>
         </div>
     </section>
@@ -310,9 +320,9 @@
     <section class="hero-two container-fluid p-5 rounded text-center" id="hero-two">
         <div class="d-flex justify-content-center align-items-center">
             <div>
-                <p class="fs-3 mb-3" data-attr="legal-support-message">احجز الآن لتلقي الدعم القانوني من فريقنا ذي الخبرة الواسعة، وتجنب المخاطر القانونية</p>
+                <p class="fs-3 mb-5" data-attr="legal-support-message">احجز الآن لتلقي الدعم القانوني من فريقنا ذي الخبرة الواسعة، وتجنب المخاطر القانونية</p>
                 <div class="animat">
-                    <a class="p-2 rounded fw-bold" id="btn-2" href="https://wa.me/966502252450" target="_blank" data-attr="book-consultation">احجز استشارتك الآن</a>
+                    <a class="p-2 px-5 rounded fw-bold" id="btn-2" href="https://wa.me/966502252450" target="_blank" data-attr="book-consultation">احجز استشارتك الآن</a>
                 </div>
             </div>
         </div>
@@ -321,7 +331,7 @@
     <!-- start partener success  -->
     <section id="customs" class="mt-5 mb-5 p-4">
         <div class="mx-2">
-            <h1 class="fw-bold" data-attr="partners-success-title">شركاء <span class="word-color" data-attr="النجاح">النجاح</span></h1>
+            <h1 class="fw-bold" data-attr="partners-success-title">شركاء <span class="word-color">النجاح</span></h1>
             <p class="line" data-attr=""></p>
         </div>
         <div class="mt-5">
@@ -411,9 +421,9 @@
     </section>
     <!-- end partener success  -->
     <!-- start footer  -->
-    <footer id="contact" class="container-fluid pb-0">
-        <div class="row px-3">
-            <article class="col-12 col-md-4 col-lg-4 mb-md-0 mb-5">
+    <footer id="contact" class="footer container-fluid pb-0 p-5">
+        <div class="row px-3 justify-content-evenly ">
+            <article class="col-12 mb-md-0 mb-5">
                 <div class="mb-4">
                     <img src="./img/logo.svg" width="72px" alt="" data-attr="logo">
                 </div>
@@ -431,7 +441,7 @@
                     </div>
                 </div>
             </article>
-            <article class="col-12 col-md-4 col-lg-4" id="quick-links">
+            <article class="col-12" id="quick-links">
                 <h4 class="mb-4" data-attr="quick-links-title">روابط سريعة</h4>
                 <div class="mb-4 d-flex flex-column gap-3 ">
                     <a href="#home" class="text-decoration-none fw-bold mb-3" data-attr="link-home"><p class="mb-3 fw-bold">الرئيسية</p></a>
@@ -441,7 +451,7 @@
                     <a href="#contact" class="text-decoration-none fw-bold mb-3 " data-attr="link-contact"><p class="mb-0 fw-bold">تواصل معنا</p></a>
                 </div>
             </article>
-            <article class="col-12 col-md-4 col-lg-4 mb-md-0 mb-5">
+            <article class="col-12 mb-md-0 mb-5">
                 <h4 class="mb-4" data-attr="contact-info-title">معلومات الاتصال</h4>
                 <div class="d-flex flex-column gap-3  ">
                     <div class="d-flex justify-content-start align-items-center gap-3 mb-3">
@@ -467,10 +477,12 @@
                 </div>
             </article>
         </div>
-        <div style="width: 100%; height: 2px; background-color: #EFF1FF;"></div>
-        <div class="row align-items-center py-4">
-            <p class="mb-0 text-center ol-12 col-md-6 col-lg-6" data-attr="copyright">كل الحقوق محفوظة &copy; 2024</p>
-            <p class="mb-0 text-center ol-12 col-md-6 col-lg-6" >
+        <div class="w-100 d-flex justify-content-center    ">
+            <div style="width: 80%; height: 1px; background-color: wheat;"></div>
+        </div>
+        <div class="row align-items-center justify-content-around py-4">
+            <p class="txt-p mb-0 text-end ol-12 col-md-5 col-lg-5 ps-5" data-attr="copyright">كل الحقوق محفوظة &copy; 2024</p>
+            <p class="txt-p mb-0 text-start ol-12 col-md-5 col-lg-5" >
                 Developed by
                 <a href="https://www.linkedin.com/company/brillianttrend/" target="_blank" class="text-decoration-none">                  Brilliant Trend
                 </a>

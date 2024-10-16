@@ -15,6 +15,9 @@ html{
     scroll-behavior: smooth;
     /* overflow-x: hidden; */
 }
+
+
+
 body {
     font-family: "Tajawal", sans-serif;
     margin: 0;
@@ -130,7 +133,7 @@ header .txt a{
     }
     header .d-flex p{
         color: white;
-        font-size: 19px !important;
+        font-size: 16px !important;
     }
     header .d-flex a{
         font-size: 14px !important;
@@ -169,8 +172,9 @@ nav a:hover {
 .who .position-absolute{
     left: 3%;
 }
-.who .row div p{
+.who .row .info-company .txt{
     text-align: justify;
+    color: red;
 }
 
 .who .row .info-company  .txt a{
@@ -201,9 +205,16 @@ nav a:hover {
 .service .content .row a{
     color: #2F2B73;
 }
-.swiper a{
+.service .swiper a{
     color: #2F2B73;
     border-color: #2F2B73 !important;
+}
+.service .swiper .mySwiper swiper-slide{
+    min-height: 360px !important;
+}
+.service .swiper article{
+    /* min-height: 90% !important; */
+    min-height: 311px;
 }
 
 .service .show a{
@@ -312,7 +323,6 @@ nav a:hover {
 footer {
     background-image: url(./img/footer.svg);
     background-size: cover;
-    background-color: #322e76;
     color: #fff;
     padding: 20px;
 }
@@ -325,7 +335,12 @@ footer {
 footer a {
     color: #b1b1f7;
 }
-
+.footer .row article, .txt-p{
+    width: 20%;
+}
+.footer .row .txt-p{
+    width: 30%;
+}
 /* end footer  */
 .services-container {
     display: flex; 
@@ -374,3 +389,4 @@ footer a {
 .animat {
     animation: scaleAnimation 1s ease-in-out infinite; /* Adjust duration and easing as needed */
 }
+
