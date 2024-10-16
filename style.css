@@ -46,6 +46,9 @@ header .offcanvas ul li a{
 header .navbar .container-fluid #bot1{ 
     color: white;
 }
+header .navbar .container-fluid #bot1 .btn-g{ 
+    cursor: pointer;
+}
 header .navbar .container-fluid #bot1 #talk-us{
     border: 1px solid white;
     color: white;
@@ -184,6 +187,10 @@ nav a:hover {
     background-color: #2F2B73;
     color: white;
 }
+.who .row .info-company  #toggleBtn-1{
+    cursor: pointer;
+    color: #2F2B73;
+}
 @media (max-width: 768px) {
     .who .row div img{
         display: none;
@@ -210,12 +217,14 @@ nav a:hover {
     border-color: #2F2B73 !important;
 }
 .service .swiper .mySwiper swiper-slide{
-    min-height: 360px !important;
+    min-height: 380px !important;
 }
+
 .service .swiper article{
     /* min-height: 90% !important; */
-    min-height: 311px;
+    min-height: 330px;
 }
+
 
 .service .show a{
     background-color: #2F2B73;
@@ -235,6 +244,9 @@ nav a:hover {
         width: 45%;
         height: 280px;
         text-align: justify;
+    }
+    .service .content .row .item-3,.item-6{
+        display: none!important;
     }
 }
 /* sm screen  */
@@ -335,11 +347,25 @@ footer {
 footer a {
     color: #b1b1f7;
 }
-.footer .row article, .txt-p{
-    width: 20%;
+.footer .row article{
+    width: 30%;
 }
 .footer .row .txt-p{
-    width: 30%;
+    width: 50% !important;
+}
+@media (max-width: 992px) {
+    .footer .row article{
+        width: 33%;
+    }
+    .footer{
+        padding-left: 1.8rem !important;
+        padding-right: 1.8rem !important;
+    }
+}
+@media (max-width: 768px) {
+    .footer .row article{
+        width: 100%;
+    }
 }
 /* end footer  */
 .services-container {
