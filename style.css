@@ -175,9 +175,9 @@ nav a:hover {
 .who .position-absolute{
     left: 3%;
 }
-.who .row .info-company .txt{
+/* .who .row .info-company .txt{
     text-align: justify;
-}
+} */
 
 .who .row .info-company  .txt a{
     color: #2F2B73 !important;
