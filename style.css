@@ -13,10 +13,8 @@
 }
 html{
     scroll-behavior: smooth;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
-
-
 
 body {
     font-family: "Tajawal", sans-serif;
@@ -69,12 +67,6 @@ header .txt a{
     }
 }
 @media (min-width: 992px) {
-    /* header .navbar .container-fluid #bot1 #lang-1{
-        display: none;
-    } */
-    /* header .navbar .container-fluid #bot1 #lang-2{
-        display: inline;
-    } */
     .navbar .container-fluid .image2{
         display: none !important;
     }
@@ -101,12 +93,6 @@ header .txt a{
     header{
         height: 390px;
     }
-    /* header .navbar .container-fluid #bot1 #lang-1{
-        display: inline;
-    } */
-    /* header .navbar .container-fluid #bot1 #lang-2{
-        display: none;
-    } */
     .navbar .container-fluid .list{
         display: none;
     }
@@ -378,37 +364,6 @@ footer a {
     }
 }
 /* end footer  */
-.services-container {
-    display: flex; 
-    overflow-x: auto; 
-    gap: 20px; 
-    scroll-behavior: smooth;
-    padding-bottom: 20px; 
-}
-
-
-.icon-box {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #dee2e6;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);
-}
-.icon-box:hover{
-    background-color: #b1b1f7;
-}
-.icon-box i {
-    color: #1a237e;
-    font-size: 2rem;
-}
-.container {
-    margin-bottom: 100px; /* Adjust this value as needed */
-}
-
 @keyframes scaleAnimation {
     0% { 
         transform: scale(1); 
@@ -420,9 +375,7 @@ footer a {
         transform: scale(1); 
     }
 }
-
 /* Apply the animation to the desired element */
 .animat {
     animation: scaleAnimation 1s ease-in-out infinite; /* Adjust duration and easing as needed */
 }
-
