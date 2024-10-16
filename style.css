@@ -41,13 +41,13 @@ header .offcanvas .offcanvas-header h5{
 header .offcanvas ul li a{
     color: #5958B5 ;
 }
-header .navbar .container-fluid #bot1{ 
+header .navbar .container #bot1{ 
     color: white;
 }
-header .navbar .container-fluid #bot1 .btn-g{ 
+header .navbar .container #bot1 .btn-g{ 
     cursor: pointer;
 }
-header .navbar .container-fluid #bot1 #talk-us{
+header .navbar .container #bot1 #talk-us{
     border: 1px solid white;
     color: white;
 }
@@ -62,12 +62,12 @@ header .txt a{
     background-color: white;
 } */
 @media (max-width: 992px) {
-    .navbar .container-fluid .image1{
+    .navbar .container .image1{
         display: none !important;
     }
 }
 @media (min-width: 992px) {
-    .navbar .container-fluid .image2{
+    .navbar .container .image2{
         display: none !important;
     }
 
@@ -76,16 +76,16 @@ header .txt a{
     header .d-flex p{
         margin-top: 3rem !important;
         color: white;
-        width: 55% !important;
-        font-size: 62px;
+        width: 80% !important;
+        font-size: 42px !important;
     }
 }
 @media (min-width: 767px) {
     header .d-flex p{
         margin-top: 3rem;
         color: white;
-        width: 100% ;
-        font-size: 40px;
+        width: 85% ;
+        font-size: 30px;
     }
 }
 /* md screen */
@@ -93,19 +93,19 @@ header .txt a{
     header{
         height: 390px;
     }
-    .navbar .container-fluid .list{
+    .navbar .container .list{
         display: none;
     }
-    .navbar .container-fluid .image2{
+    .navbar .container .image2{
         width: 80px;
     }
-    .navbar .container-fluid div #talk-us{
+    .navbar .container div #talk-us{
         display: inline-block;
         width: 114px !important;
         padding: 5px 10px !important;
         font-size: 14px;
     }
-    .navbar .container-fluid #bot2{
+    .navbar .container #bot2{
         display: none;
     }
 }
@@ -114,29 +114,32 @@ header .txt a{
     header{
         height: 207px;
     }
-    header .navbar .container-fluid #bot1 #talk-us{
+    header .navbar .container #bot1 #talk-us{
         display: none;
     }
-    header .d-flex{
+    /* header .d-flex{
         margin-top: 5px !important;
-    }
+    } */
     header .d-flex p{
         color: white;
-        font-size: 16px !important;
+        font-size: 14px !important;
+        width: 80%;
+        padding-left: 0!important;
+        padding-right: 0!important;
     }
     header .d-flex a{
         font-size: 14px !important;
     }
-    .navbar .container-fluid .image2{
+    .navbar .container .image2{
         width: 60px;
     }
-    .navbar .container-fluid div #talk-us{
+    .navbar .container div #talk-us{
         display: inline-block;
         width: 88px !important;
         padding: 5px 10px !important;
         font-size: 12px;
     }
-    .navbar .container-fluid #bot1 img{
+    .navbar .container #bot1 img{
         margin: 0 !important;
     }
 }
@@ -161,9 +164,9 @@ nav a:hover {
 .who .position-absolute{
     left: 3%;
 }
-/* .who .row .info-company .txt{
+.who .row .info-company .txt{
     text-align: justify;
-} */
+}
 
 .who .row .info-company  .txt a{
     color: #2F2B73 !important;
