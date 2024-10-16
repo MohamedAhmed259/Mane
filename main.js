@@ -195,9 +195,6 @@ setLanguage(savedLanguage);
 
 const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic");
 // console.log(languageSelectors);
-
-
-
 let btn_en_glish = document.querySelector(".btn-en-glish"); // en
 let btn_ar_abic = document.querySelector(".btn-ar-abic");  // ar
 
@@ -228,11 +225,8 @@ languageSelectors.forEach(selector => {
         updateDisplay();
     });
 });
-
+// updaate display the current language based on the current window resize
 window.addEventListener("resize", updateDisplay);
-
-
-
 // toggle display txt
 const txt = document.querySelector(".who .row .info-company .txt");
 const toggleBtn_1 = document.getElementById("toggleBtn-1");
@@ -244,6 +238,7 @@ const shortText_en = "Mani Law Firm was established in with the aim of providing
 
 const fullText_en = "Mani Law Firm was established in with the aim of providing comprehensive legal services that keep pace with local and international legal developments. Over the past years, the firm has built a strong reputation as a trusted partner for clients across various sectors, including large corporations, individuals, and government institutions. With a team of highly experienced lawyers, whose expertise spans years in various legal fields, Mani has distinguished itself by offering innovative and effective legal solutions that meet clients' needs and help them achieve their goals. At Mani, we are committed to the highest standards of professionalism and confidentiality, always striving to provide the best legal services that support our clients in facing evolving legal challenges.";
 
+// update botton more and less read 
 function updateText(isExpanded) {
     const storedLanguage = localStorage.getItem("language");
 
@@ -264,7 +259,7 @@ toggleBtn_1.addEventListener("click", () => {
     localStorage.setItem("isExpanded", isExpanded); 
     updateText(isExpanded); 
 });
-
+// update botton more and less read 
 document.addEventListener("DOMContentLoaded", () => {
     // Complete the showTxt function for English
     function showTxt() {
@@ -297,10 +292,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// change direction based on lanhuage 
+// change direction based on language 
 const offcanvasElement = document.getElementById("offcanvasNavbar");
 
-// استدعاء هذه الدالة لتحديث اتجاه الـ offcanvas بناءً على اللغة
 function updateOffcanvasDirection() {
     const storedLanguage = localStorage.getItem("language");
 
@@ -312,101 +306,21 @@ function updateOffcanvasDirection() {
         offcanvasElement.classList.add("offcanvas-start"); // لفتح القائمة من الشمال
     }
 }
-
-// قم باستدعاء الدالة عند تحميل الصفحة
+// call fub when load page 
 document.addEventListener("DOMContentLoaded", () => {
     updateOffcanvasDirection();
 });
 
-// تحديث الاتجاه عند تغيير اللغة
+// update directino when cgange language 
 languageSelectors.forEach(selector => {
     selector.addEventListener("click", (event) => {
         const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
         localStorage.setItem("language", language);
-        updateOffcanvasDirection(); // تحديث الاتجاه بناءً على اللغة الجديدة
-
+        updateOffcanvasDirection();
     });
 });
 
 // direction of swiper 
-// document.addEventListener("DOMContentLoaded", () => {
-//     // الحصول على عنصر السويبر
-//     const swiperEl = document.getElementById("service-swiper");
-
-//     // دالة لتغيير اتجاه السويبر بناءً على اللغة
-//     function dirSwiper() {
-//         const storedLanguage = localStorage.getItem("language");
-
-//         // تغيير اتجاه السويبر بناءً على اللغة
-//         if (storedLanguage === "ar") {
-//             swiperEl.setAttribute("dir", "rtl");
-//         } else {
-//             swiperEl.setAttribute("dir", "ltr");
-//         }
-
-//         // إعادة تهيئة السويبر بعد تغيير الاتجاه
-//         swiperEl.initialize();
-//     }
-
-//     // استدعاء الدالة لتعيين الاتجاه عند تحميل الصفحة
-//     dirSwiper();
-
-//     // تحديث الاتجاه عند تغيير اللغة
-//     const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic, .btn-en, .btn-ar");
-//     languageSelectors.forEach(selector => {
-//         selector.addEventListener("click", (event) => {
-//             const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
-//             setLanguage(language);
-//             localStorage.setItem("language", language);
-//             dirSwiper(); // تغيير اتجاه السويبر بناءً على اللغة الجديدة
-//         });
-//     });
-// });
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     // الحصول على عنصر السويبر
-//     const swiperEl = document.getElementById("service-swiper");
-
-//     // دالة لتغيير اتجاه السويبر بناءً على اللغة
-//     function dirSwiper() {
-//         const storedLanguage = localStorage.getItem("language");
-
-//         if (storedLanguage === "en") {
-//             // إضافة الخاصية rtl إذا كانت اللغة عربية
-//             swiperEl.setAttribute("dir", "ltr");
-//         } else {
-//             // إزالة الخاصية rtl إذا كانت اللغة إنجليزية
-//             swiperEl.removeAttribute("dir");
-//         }
-//     }
-
-//     // استدعاء الدالة لتعيين الاتجاه عند تحميل الصفحة
-//     dirSwiper();
-
-//     // تحديث الاتجاه عند تغيير اللغة
-//     const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic, .btn-en, .btn-ar");
-//     languageSelectors.forEach(selector => {
-//         selector.addEventListener("click", (event) => {
-//             const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
-//             localStorage.setItem("language", language);
-//             dirSwiper(); // تغيير اتجاه السويبر بناءً على اللغة الجديدة
-//         });
-//     });
-// });
-
-// Automatically detect language and set direction
-// window.onload = function () {
-//     const htmlTag = document.documentElement;
-//     const swiperEl = document.getElementById("service-swiper");
-
-//     if (htmlTag.lang === "ar") {
-//         content.setAttribute('dir', 'rtl');
-//         swiperEl.style.direction = "rtl";
-//     } else {
-//         content.setAttribute('dir', 'ltr');
-//         swiperEl.style.direction = "ltr";
-//     }
-// };
 
 document.addEventListener("DOMContentLoaded", () => {
     const swiperEl = document.getElementById("service-swiper");
