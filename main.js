@@ -164,6 +164,7 @@ const translations = {
     }
 };
 
+// preparing the localStorage 
 document.addEventListener("DOMContentLoaded", () => {
     const storedLanguage = localStorage.getItem("language");
 
@@ -183,7 +184,6 @@ const setLanguage = (language) => {
     elements.forEach((element) => {
         const attribute = element.getAttribute("data-attr");
         if (translations[language][attribute]) {
-            // console.log(`Setting ${attribute} to ${translations[language][attribute]}`); // Debugging line
             element.innerHTML = translations[language][attribute];
         }
     });
@@ -193,7 +193,7 @@ const setLanguage = (language) => {
 const savedLanguage = localStorage.getItem("language") || "en";
 setLanguage(savedLanguage);
 
-const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic, .btn-en, .btn-ar");
+const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic");
 // console.log(languageSelectors);
 
 
@@ -201,6 +201,7 @@ const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic
 let btn_en_glish = document.querySelector(".btn-en-glish"); // en
 let btn_ar_abic = document.querySelector(".btn-ar-abic");  // ar
 
+// updaate display the current language 
 function updateDisplay() {
     const storedLanguage = localStorage.getItem("language");
     const isSmallScreen = window.matchMedia("(max-width: 992px)").matches; 
@@ -460,7 +461,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (storedLanguage === "ar") {
             imgElement.src = "./img/Layer 1.png";  // الصورة الخاصة باللغة العربية
             menuIcon.src = "./img/menu ar.svg"; //
-            
+
             copyright.classList.add("text-end");
             developedBy.classList.add("text-start");
 

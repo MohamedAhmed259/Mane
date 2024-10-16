@@ -350,7 +350,7 @@ footer a {
     width: 30%;
 }
 .footer .row .txt-p{
-    width: 50% !important;
+    width: 50% ;
 }
 @media (max-width: 992px) {
     .footer .row article{
@@ -364,6 +364,17 @@ footer a {
 @media (max-width: 768px) {
     .footer .row article{
         width: 100%;
+        
+    }
+    .footer .row .txt-p{
+        width: 50% ;
+    
+    }
+}
+@media (max-width: 500px) {
+    .footer .txts p{
+        width: 100% !important;
+        text-align: center !important;
     }
 }
 /* end footer  */
