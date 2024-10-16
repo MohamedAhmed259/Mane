@@ -446,3 +446,51 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const imgElement = document.getElementById("dynamic-img");
+    const menuIcon = document.getElementById("menu-icon");
+    const copyright = document.getElementById("copyright");
+    const developedBy = document.getElementById("developedBy");
+
+    // دالة لتغيير الصورة بناءً على اللغة
+    function updateImageBasedOnLanguage() {
+        const storedLanguage = localStorage.getItem("language");
+
+        if (storedLanguage === "ar") {
+            imgElement.src = "./img/Layer 1.png";  // الصورة الخاصة باللغة العربية
+            menuIcon.src = "./img/menu ar.svg"; //
+            
+            copyright.classList.add("text-end");
+            developedBy.classList.add("text-start");
+
+            // إزالة class الذي يخص اللغة الإنجليزية إذا كان موجوداً
+            copyright.classList.remove("text-start");
+            developedBy.classList.remove("text-end");
+
+        } else {
+            imgElement.src = "./img/Layer-english.svg";  // الصورة الخاصة باللغة الإنجليزية
+            menuIcon.src = "./img/menu en.svg"; //
+
+            copyright.classList.add("text-start");
+            developedBy.classList.add("text-end");
+
+            // إزالة class الذي يخص اللغة العربية إذا كان موجوداً
+            copyright.classList.remove("text-end");
+            developedBy.classList.remove("text-start");
+        }
+    }
+    
+    // استدعاء الدالة عند تحميل الصفحة
+    updateImageBasedOnLanguage();
+
+    // تحديث الصورة عند تغيير اللغة
+    const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic");
+    languageSelectors.forEach(selector => {
+        selector.addEventListener("click", (event) => {
+            const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
+            localStorage.setItem("language", language);
+            updateImageBasedOnLanguage(); // تحديث الصورة بناءً على اللغة الجديدة
+        });
+    });
+});

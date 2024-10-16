@@ -33,7 +33,7 @@
                 <!-- Logo -->
                 <img src="./img/logo.svg" class="image1" width="80px" alt="foto">
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <span><img src="./img/menu.png" alt=""></span>
+                    <span><img id="menu-icon" alt="menu icon"></span>
                 </button>
                 <ul class="navbar-nav list">
                     <li class="nav-item" style="order: 1;">
@@ -100,8 +100,8 @@
     <!--start Who are we -->
     <section id="about" class="who container-fluid mt-5 mb-2 p-3 pb-5">
         <div class="row justify-content-around align-items-center">
-            <div class="col-12 col-md-5 col-lg-5 d-flex justify-content-center">
-                <img src="./img/Layer 1.png" class="p-3 w-100" alt="photo">
+            <div id="imgs" class="col-12 col-md-5 col-lg-5 d-flex justify-content-center">
+                <img id="dynamic-img" src="" class="p-3 w-100" alt="photo">
             </div>
             <div class="info-company col-12 col-md-5 col-lg-5 d-flex flex-column justify-content-between">
                 <div>
@@ -131,7 +131,7 @@
             <div class="row mb-5 gap-3 align-items-center justify-content-center">
                 <article class="d-flex justify-content-between border flex-column p-3">
                     <div>
-                        <img src="./img/service-1.png" alt="photo">
+                        <img src="./img/m-03.svg" width="62px" alt="photo">
                     </div>
                     <div>
                         <h5 data-attr="service-1-title">التقاضي وتسوية المنازعات</h5>
@@ -143,7 +143,7 @@
                 </article>
                 <article class="d-flex justify-content-between border flex-column p-3">
                     <div>
-                        <img src="./img/service-2.png" alt="photo">
+                        <img src="./img/m-04.svg" width="62px" alt="photo">
                     </div>
                     <div>
                         <h5 data-attr="service-2-title">الشركات والاستثمار في المملكة</h5>
@@ -155,7 +155,7 @@
                 </article>
                 <article class="item-3 d-flex justify-content-between border flex-column p-3">
                     <div>
-                        <img src="./img/service-3.png" alt="photo">
+                        <img src="./img/m-01.svg" width="62px" alt="photo">
                     </div>
                     <div>
                         <h5 data-attr="service-3-title">الاستشارات والدراسات القانونية</h5>
@@ -167,7 +167,7 @@
                 </article>
                 <article class="d-flex justify-content-between border flex-column p-3">
                     <div>
-                        <img src="./img/service-4.png" alt="photo">
+                        <img src="./img/m-07.svg" width="62px" alt="photo">
                     </div>
                     <div>
                         <h5 data-attr="service-4-title">حماية حقوق الملكية الفكرية</h5>
@@ -179,7 +179,7 @@
                 </article>
                 <article class="d-flex justify-content-between border flex-column p-3">
                     <div>
-                        <img src="./img/service-5.png" alt="photo">
+                        <img src="./img/m-06.svg" width="62px" alt="photo">
                     </div>
                     <div>
                         <h5 data-attr="service-5-title">التمثيل القانوني والترافع</h5>
@@ -191,7 +191,7 @@
                 </article>
                 <article class="item-6 d-flex justify-content-between border flex-column p-3">
                     <div>
-                        <img src="./img/service-6.png" alt="photo">
+                        <img src="./img/m-05.svg" width="62px" alt="photo">
                     </div>
                     <div>
                         <h5 data-attr="service-6-title">العقارات والمقاولات وإدارة الأملاك</h5>
@@ -227,7 +227,7 @@
                     <swiper-slide>
                         <article class="d-flex justify-content-between gap-2 border flex-column p-3">
                             <div>
-                                <img src="./img/service-1.png" alt="photo">
+                                <img src="./img/m-03.svg" width="62px" alt="photo">
                             </div>
                             <div>
                                 <h5 data-attr="swiper-service-1-title">التقاضي وتسوية المنازعات</h5>
@@ -241,7 +241,7 @@
                     <swiper-slide>
                         <article class="d-flex justify-content-between gap-2 border flex-column p-3">
                             <div>
-                                <img src="./img/service-2.png" alt="photo">
+                                <img src="./img/m-04.svg" width="62px" alt="photo">
                             </div>
                             <div>
                                 <h5 data-attr="swiper-service-2-title">الشركات والاستثمار في المملكة</h5>
@@ -255,7 +255,7 @@
                     <swiper-slide>
                         <article class="d-flex justify-content-between gap-2 border flex-column p-3">
                             <div>
-                                <img src="./img/service-3.png" alt="photo">
+                                <img src="./img/m-01.svg" width="62px" alt="photo">
                             </div>
                             <div>
                                 <h5 data-attr="swiper-service-3-title">الاستشارات والدراسات القانونية</h5>
@@ -269,7 +269,7 @@
                     <swiper-slide>
                         <article class="d-flex justify-content-between gap-2 border flex-column p-3">
                             <div>
-                                <img src="./img/service-4.png" alt="photo">
+                                <img src="./img/m-07.svg" width="62px" alt="photo">
                             </div>
                             <div>
                                 <h5 data-attr="swiper-service-4-title">حماية حقوق الملكية الفكرية</h5>
@@ -283,7 +283,7 @@
                     <swiper-slide>
                         <article class="d-flex justify-content-between gap-2 border flex-column p-3">
                             <div>
-                                <img src="./img/service-5.png" alt="photo">
+                                <img src="./img/m-06.svg" width="62px" alt="photo">
                             </div>
                             <div>
                                 <h5 data-attr="swiper-service-5-title">التمثيل القانوني والترافع</h5>
@@ -297,7 +297,7 @@
                     <swiper-slide>
                         <article class="d-flex justify-content-between gap-2 border flex-column p-3">
                             <div>
-                                <img src="./img/service-6.png" alt="photo">
+                                <img src="./img/m-05.svg" width="62px" alt="photo">
                             </div>
                             <div>
                                 <h5 data-attr="swiper-service-6-title">العقارات والمقاولات وإدارة الأملاك</h5>
@@ -482,13 +482,13 @@
         </div>
         <div class="w-100 d-flex justify-content-center">
             <div class="row align-items-center justify-content-between py-4" style="width: 90%;">
-                <p class="txt-p mb-0 text-end col-md-5 col-lg-5 p-0" data-attr="copyright">كل الحقوق محفوظة &copy; 2024</p>
-                <p class="txt-p mb-0 text-start col-md-5 col-lg-5 p-0" >
+                <p id="copyright" class="txt-p mb-0 col-md-5 col-lg-5 p-0" data-attr="copyright">كل الحقوق محفوظة &copy; 2024</p>
+                <p id="developedBy" class="txt-p mb-0 col-md-5 col-lg-5 p-0" >
                     Developed by
                     <a href="https://www.linkedin.com/company/brillianttrend/" target="_blank" class="text-decoration-none">
                             Brilliant Trend
                     </a>
-                </p>            
+                </p>
             </div>
         </div>
     </footer>
