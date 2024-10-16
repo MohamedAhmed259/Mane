@@ -47,6 +47,42 @@ header .navbar .container #bot1{
 header .navbar .container #bot1 .btn-g{ 
     cursor: pointer;
 }
+
+
+
+@media (max-width: 767px) {
+
+    header .navbar .container #bot1{ 
+        align-items: start !important;
+    }
+    header .navbar .container #bot1 .btn-g{ 
+        margin-top: -5px !important;
+    }
+}
+@media (max-width: 992px) {
+    header .navbar .container #bot1{ 
+        align-items: center;
+    }
+    header .navbar .container #bot1 .btn-g{ 
+        margin-top: 0 ;
+    }
+    header .navbar .container #bot1 .global{ 
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}
+@media (min-width: 992px) {
+    header .navbar .container #bot1{ 
+        align-items: center;
+    }
+    header .navbar .container #bot1 .btn-g{ 
+        margin-top: 0;
+    }
+}
+
+
+
+
 header .navbar .container #bot1 #talk-us{
     border: 1px solid white;
     color: white;
@@ -197,6 +233,10 @@ nav a:hover {
 .service .content .row p{
     text-align: justify;
 }
+.service .content .row{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
 .service .content .row a{
     color: #2F2B73;
 }
@@ -326,11 +366,18 @@ footer {
     color: #fff;
     padding: 20px;
 }
+.footer .icons-conect{
+    width: 125px;
+}
 @media (max-width: 767px) {
     footer .row #quick-links{
         display: none;
     }
+    .footer .icons-conect{
+        width: 100%;
+    }
 }
+
 
 footer a {
     color: #ffffff;

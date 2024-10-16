@@ -20,11 +20,11 @@
     <!-- start header  -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light ">
-            <div class="container px -5 justify- content-around ">
+            <div class="container align-items-start mt-3  ">
                 <!-- Logo -->
                 <img src="./img/logo.svg" class="image1" width="80px" alt="foto">
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <span><img id="menu-icon" alt="menu icon"></span>
+                <button class="navbar-toggler pt-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <img id="menu-icon" alt="menu icon">
                 </button>
                 <ul class="navbar-nav list">
                     <li class="nav-item" style="order: 1;">
@@ -44,10 +44,10 @@
                     </li>
                 </ul>
                 <img src="./img/logo-md.svg" class="image2" alt="foto">
-                <div id="bot1" class="d-flex align-items-center justify-content-center gap-2">
+                <div id="bot1" class="d-flex align-items -start justify-content-center gap-2">
                     <div  class="btn-en-glish btn-g" data-attr="language-en"></div>
                     <div  class="btn-ar-abic btn-g " data-attr="language-ar"></div>
-                    <img src="./img/Frame.png" class="m-2 rounded" width="16px" alt="photo">
+                    <img src="./img/Frame.png" class="global m-2 rounded" width="12px" alt="photo">
                     <a href="https://wa.me/966502252450" target="_blank" id="talk-us" class="p-2 px-5 fw-bold rounded text-decoration-none" data-attr="talk-us">تحدث معنا</a>
                 </div>
             </div>
@@ -116,11 +116,11 @@
     <!-- start services -->
     <section id="services" class="service container mb-5">
         <div class="content" dir="auto">
-            <div class="mx-3 px-1">
+            <div class="px-0 container ">
                 <h1 class="fw-bold" data-attr="services-title">خدماتنا <span class="word-color" data-attr="services-highlight">القانونية</span></h1>
                 <p class="line"></p>
             </div>
-            <div class="row mb-5 gap-3 align-items-center justify-content-center">
+            <div class="row mb-5 gap-3 align-items-center justify-content-between ">
                 <article class="d-flex justify-content-between border flex-column p-3">
                     <div>
                         <img src="./img/m-03.svg" width="62px" alt="photo">
@@ -415,96 +415,74 @@
     </section>
     <!-- end partener success  -->
     <!-- start footer  -->
-<<<<<<< HEAD
-    <footer id="contact" class="footer pb-0 py-5">
+    <footer id="contact" class="footer  pb-0 p-5">
         <div class="container">
             <div class="row px-3 justify-content-evenly ">
                 <article class=" mb-md-0 mb-5">
                     <div class="mb-4">
                         <img src="./img/logo.svg" width="72px" alt="" data-attr="logo">
                     </div>
-                    <div class="icons-conect d-flex flex-md-column gap-1 gap-md-4">
-                        <div>
-                            <a href="" target="_blank"><img src="./img/Social Icons-1.svg" width="27px" class="ms-2 ms-md-2" alt="photo" data-attr="social-icon-1"></a>
-                            <a href="" target="_blank"><img src="./img/Social Icons-2.svg" width="27px" class="ms-2 ms-md-2" alt="photo" data-attr="social-icon-2"></a>
-                            <a href="" target="_blank"><img src="./img/Social Icons-3.svg" width="27px" class="ms-2 ms-md-2" alt="photo" data-attr="social-icon-3"></a>
-                            <a href="" target="_blank"><img src="./img/Social Icons-4.svg" width="27px" class="ms-2 ms-md-2" alt="photo" data-attr="social-icon-4"></a>
+                    <div class="icons-conect d-flex flex-wrap flex- md-column gap-2">
+                        
+                            <a href="https://wa.me/966502252450" target="_blank"><img src="./img/Social Icons-1.svg" width="30px" class="mb-md-2 ms-1 mx-md-0  " alt="photo" data-attr="social-icon-1"></a>
+                            <a href="https://x.com/manilawsa" target="_blank"><img src="./img/Social Icons-2.svg" width="30px" class="mb-md-2 ms-1 mx-md-0  " alt="photo" data-attr="social-icon-2"></a>
+                            <a href="https://www.linkedin.com/company/mani-lawsa/?viewAsMember=true" target="_blank"><img src="./img/Social Icons-3.svg" width="30px" class="mb-md-2 ms-1 mx-md-0  " alt="photo" data-attr="social-icon-3"></a>
+                        
+                        
+                            <a href="https://www.facebook.com/mani.lawsa" target="_blank"><img src="./img/Social Icons-5.svg" width="30px" class=" ms-1 mx-md-0  " alt="photo" data-attr="social-icon-5"></a>
+                            <a href="https://www.instagram.com/manilawsa?igsh=MXI1MWR0bDhscHhueQ==" target="_blank"><img src="./img/Social Icons-7.svg" width="30px" class=" ms-1 mx-md-0  " alt="photo" data-attr="social-icon-7"></a>
+                            <a href="https://www.tiktok.com/@mani.lawsa" target="_blank"><img src="./img/Social Icons-4.svg" width="30px" class="" alt="photo" data-attr="social-icon-4"></a>
+                        
+                    </article>
+                    <article class="" id="quick-links">
+                        <h4 class="mb-4" data-attr="quick-links-title">روابط سريعة</h4>
+                        <div class="mb-4 d-flex flex-column gap-3 ">
+                            <a href="#home" class="text-decoration-none fw-bold mb-3" data-attr="link-home"><p class="mb-3">الرئيسية</p></a>
+                            <a href="#about" class="text-decoration-none fw-bold mb-3 " data-attr="link-about"><p class="mb-3">من نحن</p></a>
+                            <a href="#services" class="text-decoration-none fw-bold mb-3 " data-attr="link-services"><p class="mb-3">الخدمات</p></a>
+                            <a href="#customs" class="text-decoration-none fw-bold mb-3 " data-attr="link-customers"><p class="mb-3">العملاء</p></a>
+                            <a href="#contact" class="text-decoration-none fw-bold mb-3 " data-attr="link-contact"><p class="mb-0">تواصل معنا</p></a>
                         </div>
-                        <div>
-                            <a href="" target="_blank"><img src="./img/Social Icons-5.svg" width="27px" class="ms-2 ms-md-2" alt="photo" data-attr="social-icon-5"></a>
-                            <a href="" target="_blank"><img src="./img/Social Icons-6.svg" width="27px" class="ms-2 ms-md-2" alt="photo" data-attr="social-icon-6"></a>
-                            <a href="" target="_blank"><img src="./img/Social Icons-7.svg" width="27px" class="ms-2 ms-md-2" alt="photo" data-attr="social-icon-7"></a>
+                    </article>
+                    <article class=" mb-md-0 mb-5">
+                        <h4 class="mb-4" data-attr="contact-info-title">معلومات الاتصال</h4>
+                        <div class="d-flex flex-column gap-3  ">
+                            <div class="d-flex justify-content-start align-items-center gap-3 mb-3">
+                                <img src="./img/location icon.png" alt="" data-attr="location-icon">
+                                <p class="m-0" data-attr="location-text">الـــــرياض - الخبــــــر - جــــــــدة</p>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center gap-3 mb-3">
+                                <img src="./img/phone icon.png" alt="" data-attr="phone-icon">
+                                <a href="https://wa.me/966502252450" class="text-decoration-none" target="_blank" data-attr="phone-link">
+                                    <p dir="ltr" class="m-0" data-attr="phone-text">+966 50 225 2450</p>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center gap-3 mb-3">
+                                <img src="./img/email icon.png" alt="" data-attr="email-icon">
+                                <a href="mailto:manilaw@mani-law.com" target="_blank" class="text-decoration-none" >
+                                    <p class="m-0" data-attr="email-text">manilaw@mani-law.com</p>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center gap-3 mb-3">
+                                <img src="./img/globe.png" alt="" data-attr="website-icon">
+                                <a href="https://www.mani-law.com/" target="_blank" class="text-decoration-none"><p class="m-0" data-attr="website-text">www.mani-law.com</p></a>
+                            </div>
                         </div>
-=======
-    <footer id="contact" class="footer container-fluid pb-0 p-5">
-        <div class="row px-3 justify-content-evenly ">
-            <article class=" mb-md-0 mb-5">
-                <div class="mb-4">
-                    <img src="./img/logo.svg" width="72px" alt="" data-attr="logo">
-                </div>
-                <div class="icons-conect d-flex flex-md-column gap-1 gap-md-4">
-                    <div>
-                        <a href="https://wa.me/966502252450" target="_blank"><img src="./img/Social Icons-1.svg" width="27px" class="ms-2 ms-md-2" alt="photo" data-attr="social-icon-1"></a>
-                        <a href="https://x.com/manilawsa" target="_blank"><img src="./img/Social Icons-2.svg" width="27px" class="ms-2 ms-md-2" alt="photo" data-attr="social-icon-2"></a>
-                        <a href="https://www.linkedin.com/company/mani-lawsa/?viewAsMember=true" target="_blank"><img src="./img/Social Icons-3.svg" width="27px" class="ms-2 ms-md-2" alt="photo" data-attr="social-icon-3"></a>
-                        <a href="https://www.tiktok.com/@mani.lawsa" target="_blank"><img src="./img/Social Icons-4.svg" width="27px" class="ms-2 ms-md-2" alt="photo" data-attr="social-icon-4"></a>
-                    </div>
-                    <div>
-                        <a href="https://www.facebook.com/mani.lawsa" target="_blank"><img src="./img/Social Icons-5.svg" width="27px" class="ms-2 ms-md-2" alt="photo" data-attr="social-icon-5"></a>
-                        <a href="" target="_blank"><img src="./img/Social Icons-6.svg" width="27px" class="ms-2 ms-md-2" alt="photo" data-attr="social-icon-6"></a>
-                        <a href="https://www.instagram.com/manilawsa?igsh=MXI1MWR0bDhscHhueQ==" target="_blank"><img src="./img/Social Icons-7.svg" width="27px" class="ms-2 ms-md-2" alt="photo" data-attr="social-icon-7"></a>
->>>>>>> 14a2dce8594352592944a6a57fb664175eb0132c
-                    </div>
-                </article>
-                <article class="" id="quick-links">
-                    <h4 class="mb-4" data-attr="quick-links-title">روابط سريعة</h4>
-                    <div class="mb-4 d-flex flex-column gap-3 ">
-                        <a href="#home" class="text-decoration-none fw-bold mb-3" data-attr="link-home"><p class="mb-3">الرئيسية</p></a>
-                        <a href="#about" class="text-decoration-none fw-bold mb-3 " data-attr="link-about"><p class="mb-3">من نحن</p></a>
-                        <a href="#services" class="text-decoration-none fw-bold mb-3 " data-attr="link-services"><p class="mb-3">الخدمات</p></a>
-                        <a href="#customs" class="text-decoration-none fw-bold mb-3 " data-attr="link-customers"><p class="mb-3">العملاء</p></a>
-                        <a href="#contact" class="text-decoration-none fw-bold mb-3 " data-attr="link-contact"><p class="mb-0">تواصل معنا</p></a>
-                    </div>
-                </article>
-                <article class=" mb-md-0 mb-5">
-                    <h4 class="mb-4" data-attr="contact-info-title">معلومات الاتصال</h4>
-                    <div class="d-flex flex-column gap-3  ">
-                        <div class="d-flex justify-content-start align-items-center gap-3 mb-3">
-                            <img src="./img/location icon.png" alt="" data-attr="location-icon">
-                            <p class="m-0" data-attr="location-text">الـــــرياض - الخبــــــر - جــــــــدة</p>
-                        </div>
-                        <div class="d-flex justify-content-start align-items-center gap-3 mb-3">
-                            <img src="./img/phone icon.png" alt="" data-attr="phone-icon">
-                            <a href="https://wa.me/966502252450" class="text-decoration-none" target="_blank" data-attr="phone-link">
-                                <p dir="ltr" class="m-0" data-attr="phone-text">+966 50 225 2450</p>
-                            </a>
-                        </div>
-                        <div class="d-flex justify-content-start align-items-center gap-3 mb-3">
-                            <img src="./img/email icon.png" alt="" data-attr="email-icon">
-                            <a href="mailto:manilaw@mani-law.com" target="_blank" class="text-decoration-none" >
-                                <p class="m-0" data-attr="email-text">manilaw@mani-law.com</p>
-                            </a>
-                        </div>
-                        <div class="d-flex justify-content-start align-items-center gap-3 mb-3">
-                            <img src="./img/globe.png" alt="" data-attr="website-icon">
-                            <a href="https://www.mani-law.com/" target="_blank" class="text-decoration-none"><p class="m-0" data-attr="website-text">www.mani-law.com</p></a>
-                        </div>
-                    </div>
-                </article>
+                    </article>
             </div>
             <div class="w-100 d-flex justify-content-center    ">
-                <div style="width: 90%; height: 1px; background-color: wheat;"></div>
+                    <div style="width: 90%; height: 1px; background-color: wheat;"></div>
             </div>
             <div class="w-100 d-flex justify-content-center">
-                <div class="row txts align-items-center justify-content-between py-4" style="width: 90%;">
-                    <p id="copyright" class="txt-p mb-0 col-md-5 col-lg-5 p-0" data-attr="copyright">كل الحقوق محفوظة &copy; 2024</p>
-                    <p id="developedBy" class="txt-p mb-0 col-md-5 col-lg-5 p-0" >
-                        Developed by
-                        <a href="https://www.linkedin.com/company/brillianttrend/" target="_blank" class="text-decoration-none">
-                                Brilliant Trend
-                        </a>
-                    </p>
-                </div>
+                    <div class="row txts align-items-center justify-content-between py-4" style="width: 90%;">
+                        <p id="copyright" class="txt-p mb-0 col-md-5 col-lg-5 p-0" data-attr="copyright">كل الحقوق محفوظة &copy; 2024</p>
+                        <p id="developedBy" class="txt-p mb-0 col-md-5 col-lg-5 p-0" >
+                            Developed by
+                            <a href="https://www.linkedin.com/company/brillianttrend/" target="_blank" class="text-decoration-none">
+                                    Brilliant Trend
+                            </a>
+                        </p>
+                    </div>
             </div>
         </div>
     </footer>
