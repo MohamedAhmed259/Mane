@@ -32,6 +32,17 @@ header {
     /* width: 100%; */
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+    header .navbar #menu-icon{
+        width: 48px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    header .navbar #menu-icon{
+        width: 25px;
+    }
+}
 header .offcanvas{
     background-color: #EFF1FF !important;
 }
@@ -79,8 +90,6 @@ header .navbar .container #bot1 .btn-g{
         margin-top: 0;
     }
 }
-
-
 
 
 header .navbar .container #bot1 #talk-us{
@@ -260,9 +269,9 @@ nav a:hover {
 .service .content .row a{
     color: #2F2B73;
 }
-.service .content .row .item-5{
+/* .service .content .row .item-5{
     line-height: 31px;
-}
+} */
 .service .swiper a{
     color: #2F2B73;
     border-color: #2F2B73 !important;
@@ -277,6 +286,12 @@ nav a:hover {
 }
 .service  article{
     font-size: 14px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+.service  article:hover{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 

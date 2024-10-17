@@ -319,47 +319,107 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-let article = document.querySelectorAll(".service .content .row article");
+document.addEventListener("DOMContentLoaded", () => {
+    const articles = document.querySelectorAll(".service .content .row article");
 
+    function updateArticleHeight() {
+        const storedLanguage = localStorage.getItem("language");
+        const screenWidth = window.innerWidth;
 
+        articles.forEach(article => {
+            if (storedLanguage === "ar") {
+                if (screenWidth >= 992) {
+                    // الشاشات الكبيرة باللغة العربية
+                    article.style.height = "185px";
+                } else if (screenWidth >= 768 && screenWidth < 992) {
+                    // الشاشات المتوسطة باللغة العربية
+                    article.style.height = "180px";
+                }
+            } else {
+                if (screenWidth >= 992) {
+                    // الشاشات الكبيرة باللغة الإنجليزية
+                    article.style.height = "220px";
+                } else if (screenWidth >= 768 && screenWidth < 992) {
+                    // الشاشات المتوسطة باللغة الإنجليزية
+                    article.style.height = "180px";
+                }
+            }
+        });
+    }
 
+    // استدعاء الدالة عند تحميل الصفحة
+    updateArticleHeight();
 
+    // تحديث الارتفاع عند تغيير حجم النافذة
+    window.addEventListener("resize", updateArticleHeight);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// update directino when cgange language 
-languageSelectors.forEach(selector => {
-    selector.addEventListener("click", (event) => {
-        const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
-        localStorage.setItem("language", language);
-        updateOffcanvasDirection();
+    // تحديث الارتفاع عند تغيير اللغة
+    const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic");
+    languageSelectors.forEach(selector => {
+        selector.addEventListener("click", () => {
+            updateArticleHeight();
+        });
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// update offcanvasElement directino when cgange language 
+
+document.addEventListener("DOMContentLoaded", () => {
+    // تحديث الاتجاه الخاص بـ Offcanvas بناءً على اللغة
+    function updateOffcanvasDirection() {
+        const storedLanguage = localStorage.getItem("language");
+        const offcanvasElement = document.getElementById("offcanvasNavbar");
+
+        if (storedLanguage === "ar") {
+            offcanvasElement.classList.add("offcanvas-end");
+            offcanvasElement.classList.remove("offcanvas-start");
+        } else {
+            // إزالة اتجاه RTL للقائمة
+            offcanvasElement.setAttribute("dir", "ltr");
+            offcanvasElement.classList.add("offcanvas-start");
+            offcanvasElement.classList.remove("offcanvas-end");
+        }
+    }
+
+    // استدعاء الدالة لتحديث الاتجاه عند تحميل الصفحة
+    updateOffcanvasDirection();
+
+    // التعامل مع تغييرات اللغة
+    const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic, .btn-en, .btn-ar");
+    languageSelectors.forEach(selector => {
+        selector.addEventListener("click", (event) => {
+            const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
+            localStorage.setItem("language", language);
+
+            // تحديث اتجاه الـ Offcanvas بناءً على اللغة
+            updateOffcanvasDirection();
+        });
+    });
+});
+
+
+
 
 // direction of swiper 
 document.addEventListener("DOMContentLoaded", () => {
