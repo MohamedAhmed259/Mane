@@ -40,7 +40,7 @@ header {
 
 @media (max-width: 767.98px) {
     header .navbar #menu-icon{
-        width: 25px;
+        width: 35px;
     }
 }
 header .offcanvas{
@@ -57,6 +57,9 @@ header .navbar .container #bot1{
 }
 header .navbar .container #bot1 .btn-g{ 
     cursor: pointer;
+}
+header .navbar  .menu-toggle{ 
+    border-color: #EFF1FF;
 }
 
 
