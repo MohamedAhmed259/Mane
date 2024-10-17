@@ -319,6 +319,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+let article = document.querySelectorAll(".service .content .row article");
+
 
 
 
