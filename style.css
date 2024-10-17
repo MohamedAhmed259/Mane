@@ -40,7 +40,7 @@ header {
 
 @media (max-width: 767.98px) {
     header .navbar #menu-icon{
-        width: 35px;
+        width: 30px;
     }
 }
 header .offcanvas{
