@@ -241,17 +241,20 @@ nav a:hover {
 .service .content .row a{
     color: #2F2B73;
 }
+.service .content .row .item-5{
+    line-height: 31px;
+}
 .service .swiper a{
     color: #2F2B73;
     border-color: #2F2B73 !important;
 }
 .service .swiper .mySwiper swiper-slide{
-    min-height: 380px !important;
+    min-height: 275px !important;
 }
 
 .service .swiper article{
     /* min-height: 90% !important; */
-    min-height: 330px;
+    min-height: 220px;
 }
 
 
@@ -263,7 +266,7 @@ nav a:hover {
 @media (min-width: 992px) {
     .service .content .row article{
         width: 30%;
-        height: 320px;
+        height: 225px;
         text-align: justify;
     }
 }
@@ -271,11 +274,14 @@ nav a:hover {
 @media (max-width: 992px) {
     .service .content .row article{
         width: 45%;
-        height: 280px;
+        height: 200px;
         text-align: justify;
     }
     .service .content .row .item-3,.item-6{
         display: none!important;
+    }
+    .service .content .row .item-5{
+        line-height: inherit;
     }
 }
 /* sm screen  */
