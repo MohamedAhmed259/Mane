@@ -90,6 +90,25 @@ header .navbar .container #bot1 #talk-us{
 .offcanvas {
     width: 250px; /* Adjust the width as needed */
 }
+@media (min-width: 992px) {
+    header .txt {
+        height: 562px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    header .txt {
+        height: 306px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    header .txt {
+        height: 135.5px;
+    }
+}
+
+
 header .txt a{
     background-color: white;
     color: #2F2B73;
@@ -110,7 +129,7 @@ header .txt a{
 }
 @media (min-width: 992px) {
     header .d-flex p{
-        margin-top: 3rem !important;
+        /* margin-top: 3rem !important; */
         color: white;
         width: 80% !important;
         font-size: 42px !important;
