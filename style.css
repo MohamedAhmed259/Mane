@@ -69,9 +69,9 @@ header .navbar  .menu-toggle{
     header .navbar .container #bot1{ 
         align-items: start !important;
     }
-    /* header .navbar .container #bot1 .btn-g{ 
-        margin-top: px !important;
-    } */
+    header .navbar .container #bot1 .btn-g{ 
+        margin-top: -5px !important;
+    }
 }
 @media (max-width: 992px) {
     header .navbar .container #bot1{ 
