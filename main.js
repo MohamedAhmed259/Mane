@@ -231,85 +231,124 @@ window.addEventListener("resize", updateDisplay);
 const txt = document.querySelector(".who .row .info-company .txt");
 const toggleBtn_1 = document.getElementById("toggleBtn-1");
 
-const shortText_ar = "تأسســـت شركــــة  ماني للمحامــــاة  عـام  1441 هــ بهـــدف تقــــديـم خـدمــــــــات قانـونيــــــة متكــامـلـــــة تـــواكــــب التـطــــــورات القانونيـــــــة المحــليــــة والــدوليـــة. على مــدى السنـــــوات الماضيـــــة، اسـتطــــاعـت الشـركـــــة أن تـبنـــــي سـمعــــة قوية كشـــريك موثــــوق للعمــلاء من مختلـــــف القـطــــاعـــات، بـمــا فــي ذلـــك الشــــركـــات الكبيـــــرة، الأفــراد، والـمـؤسســات الحكـوميــة فـضــل فـــريـق مــن المحامين ذوي الخبرة الواسعة، حيث تصل خبرات المحامين إلى 10 سنوات فـي مجـالات قانونيـة متـعـددة، تمـيـزت   ماني  بتقـديـم حلـول قانونيـة مبتكـرة وفعّالة تلبي احتياجات عملائها...";
-const fullText_ar = "تأسست شركة  ماني للمحاماة عام 1441 هـ بهدف تقديم خدمات قانونية متكاملة تواكب التطورات القانونية المحلية والدولية. على مدى السنوات الماضية، استطاعت الشركة أن تبني سمعة قوية كشريك موثوق للعملاء من مختلف القطاعات، بما في ذلك الشركات الكبيرة، الأفراد، والمؤسسات الحكومية. بفضل فريق من المحامين ذوي الخبرة الواسعة، حيث تصل خبرات المحامين إلى 10 سنوات في مجالات قانونية متعددة، تميزت  ماني بتقديم حلول قانونية مبتكرة وفعّالة تلبي احتياجات عملائها وتساعدهم في تحقيق أهدافهم. نلتزم في  ماني بالاحترافية العالية والسرية التامة، ونسعى دائماً إلى تقديم أفضل الخدمات القانونية التي تدعم عملاءنا في مواجهة التحديات القانونية المتغيرة.";
 
-const shortText_en = "Mani Law Firm was established in with the aim of providing comprehensive legal services that keep pace with local and international legal developments. Over the past years, the firm has built a strong reputation as a trusted partner for clients across various sectors, including large corporations, individuals, and government institutions...";
 
-const fullText_en = "Mani Law Firm was established in with the aim of providing comprehensive legal services that keep pace with local and international legal developments. Over the past years, the firm has built a strong reputation as a trusted partner for clients across various sectors, including large corporations, individuals, and government institutions. With a team of highly experienced lawyers, whose expertise spans years in various legal fields, Mani has distinguished itself by offering innovative and effective legal solutions that meet clients' needs and help them achieve their goals. At Mani, we are committed to the highest standards of professionalism and confidentiality, always striving to provide the best legal services that support our clients in facing evolving legal challenges.";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// show text in large screen
+const shortText_lg_ar = "تأسســـت شركــــة  'ماني للمحامــــاة'  عـام  1441 هــ بهـــدف تقــــديـم خـدمــــــــات قانـونيــــــة متكــامـلـــــة تـــواكــــب التـطــــــورات القانونيـــــــة المحــليــــة والــدوليـــة. على مــدى السنـــــوات الماضيـــــة، اسـتطــــاعـت الشـركـــــة أن تـبنـــــي سـمعــــة قوية كشـــريك موثــــوق للعمــلاء من مختلـــــف القـطــــاعـــات، بـمــا فــي ذلـــك الشــــركـــات الكبيـــــرة، الأفــراد، والـمـؤسســات الحكـوميــة بفـضــل فـــريـق مــن المحامين ذوي الخبرة الواسعة، حيث تصل خبرات المحامين إلى 10 سنوات فـي مجـالات قانونيـة متـعـددة، تمـيـزت   ماني  بتقـديـم حلـول قانونيـة مبتكـرة وفعّالة تلبي احتياجات عملائها...";
+const fullText_lg_ar = "تأسست شركة  'ماني للمحاماة' عام 1441 هـ بهدف تقديم خدمات قانونية متكاملة تواكب التطورات القانونية المحلية والدولية. على مدى السنوات الماضية، استطاعت الشركة أن تبني سمعة قوية كشريك موثوق للعملاء من مختلف القطاعات، بما في ذلك الشركات الكبيرة، الأفراد، والمؤسسات الحكومية. بفضل فريق من المحامين ذوي الخبرة الواسعة، حيث تصل خبرات المحامين إلى 10 سنوات في مجالات قانونية متعددة، تميزت  ماني بتقديم حلول قانونية مبتكرة وفعّالة تلبي احتياجات عملائها وتساعدهم في تحقيق أهدافهم. نلتزم في  'ماني' بالاحترافية العالية والسرية التامة، ونسعى دائماً إلى تقديم بفضل الخدمات القانونية التي تدعم عملاءنا في مواجهة التحديات القانونية المتغيرة.";
+const shortText_lg_en = "Mani Law Firm was established in with the aim of providing comprehensive legal services that keep pace with local and international legal developments. Over the past years, the firm has built a strong reputation as a trusted partner for clients across various sectors, including large corporations, individuals, and government institutions...";
+const fullText_lg_en = "Mani Law Firm was established in with the aim of providing comprehensive legal services that keep pace with local and international legal developments. Over the past years, the firm has built a strong reputation as a trusted partner for clients across various sectors, including large corporations, individuals, and government institutions. With a team of highly experienced lawyers, whose expertise spans years in various legal fields, Mani has distinguished itself by offering innovative and effective legal solutions that meet clients' needs and help them achieve their goals. At Mani, we are committed to the highest standards of professionalism and confidentiality, always striving to provide the best legal services that support our clients in facing evolving legal challenges.";
+
+// show text in mediam screen
+const shortText_md_ar = "تأسســـت شركــــة ' ماني للمحامــــاة' عام 1441 هـ بهـــدف تقــــديم خدمــــــــات قانونيــــــة متكاملـــــة تواكــــب التطــــــورات القانونيـــــــة المحليــــة والدولية. على مدى السنــــوات الماضيــــة، استطــــاعت الشركـــة أن تبنـــي سمعـــة قوية كشـــريك موثــــوق للعمــلاء من مختلـــــف القطــــاعـــات، بما في ذلك الشــــركــات الكبيــــرة، الأفراد، والمؤسسات الحكومية...";
+const fullText_md_ar = "تأسست شركة ' ماني للمحاماة ' ; عام 1441 هـ بهدف تقديم خدمات قانونية متكاملة تواكب التطورات القانونية المحلية والدولية. على مدى السنوات الماضية، استطاعت الشركة أن تبني سمعة قوية كشريك موثوق للعملاء من مختلف القطاعات، بما في ذلك الشركات الكبيرة، الأفراد، والمؤسسات الحكومية. بفضل فريق من المحامين ذوي الخبرة الواسعة، حيث تصل خبرات المحامين إلى 10 سنوات في مجالات قانونية متعددة، تميزت 'ماني' بتقديم حلول قانونية مبتكرة وفعّالة تلبي احتياجات عملائها وتساعدهم في تحقيق أهدافهم. نلتزم في ' ماني' بالاحترافية العالية والسرية التامة، ونسعى دائماً إلى تقديم أفضل الخدمات القانونية التي تدعم عملاءنا في مواجهة التحديات القانونية المتغيرة.";
+const shortText_md_en = "Mani Law Firm was established in with the aim of providing comprehensive legal services that keep pace with local and international legal developments. Over the past years, the firm has built a strong reputation as a trusted partner for clients across various sectors, including large corporations, individuals, and government institutions.. ";
+const fullText_md_en = "Mani Law Firm was established in with the aim of providing comprehensive legal services that keep pace with local and international legal developments. Over the past years, the firm has built a strong reputation as a trusted partner for clients across various sectors, including large corporations, individuals, and government institutions. With a team of highly experienced lawyers, whose expertise spans years in various legal fields, Mani has distinguished itself by offering innovative and effective legal solutions that meet clients' needs and help them achieve their goals. At Mani, we are committed to the highest standards of professionalism and confidentiality, always striving to provide the best legal services that support our clients in facing evolving legal challenges.";
+
+// show text in small screen
+const shortText_sm_ar = "تأسســـــت شركــة ' مـاني للمحـــاماة' عام 1441 هـ بهــدف تقـديم خدمــــات قانونية متكاملة تواكب التطـــورات القانونيـــة المحليـــة والدولية. على مدى السنــــوات الماضيـــة، استطـــاعت الشركة أن تبنـــي سمعـــة قوية كشريك موثوق للعملاء من مختلف القطاعات..";
+const fullText_sm_ar = "تأسست شركة 'ماني للمحاماة' عام 1441 هـ بهدف تقديم خدمات قانونية متكاملة تواكب التطورات القانونية المحلية والدولية. على مدى السنوات الماضية، استطاعت الشركة أن تبني سمعة قوية كشريك موثوق للعملاء من مختلف القطاعات، بما في ذلك الشركات الكبيرة، الأفراد، والمؤسسات الحكومية. بفضل فريق من المحامين ذوي الخبرة الواسعة، حيث تصل خبرات المحامين إلى 10 سنوات في مجالات قانونية متعددة، تميزت ' ماني' بتقديم حلول قانونية مبتكرة وفعّالة تلبي احتياجات عملائها وتساعدهم في تحقيق أهدافهم. نلتزم في ' ماني' بالاحترافية العالية والسرية التامة، ونسعى دائماً إلى تقديم بفضل الخدمات القانونية التي تدعم عملاءنا في مواجهة التحديات القانونية المتغيرة.";
+const shortText_sm_en = "Mani Law Firm was established in with the aim of providing comprehensive legal services that keep pace with local and international legal developments. Over the past years, the firm has built a strong reputation as a trusted partner for clients across various sectors..";
+const fullText_sm_en =  "Mani Law Firm was established in with the aim of providing comprehensive legal services that keep pace with local and international legal developments. Over the past years, the firm has built a strong reputation as a trusted partner for clients across various sectors, including large corporations, individuals, and government institutions. With a team of highly experienced lawyers, whose expertise spans years in various legal fields, Mani has distinguished itself by offering innovative and effective legal solutions that meet clients' needs and help them achieve their goals. At Mani, we are committed to the highest standards of professionalism and confidentiality, always striving to provide the best legal services that support our clients in facing evolving legal challenges.";
+
 
 // update botton more and less read 
 function updateText(isExpanded) {
     const storedLanguage = localStorage.getItem("language");
+    const width = window.innerWidth;
+    let shortText, fullText;
 
-    if (storedLanguage === "ar") {
-        txt.innerHTML = isExpanded ? fullText_ar : shortText_ar;
-        toggleBtn_1.innerHTML = isExpanded ? "عرض أقل" : "أقرأ المزيد";
+    if (width >= 1200) {
+        // شاشة كبيرة
+        shortText = storedLanguage === "ar" ? shortText_lg_ar : shortText_lg_en;
+        fullText = storedLanguage === "ar" ? fullText_lg_ar : fullText_lg_en;
+    } else if (width >= 768) {
+        // شاشة متوسطة
+        shortText = storedLanguage === "ar" ? shortText_md_ar : shortText_md_en;
+        fullText = storedLanguage === "ar" ? fullText_md_ar : fullText_md_en;
     } else {
-        txt.innerHTML = isExpanded ? fullText_en : shortText_en;
-        toggleBtn_1.innerHTML = isExpanded ? "Show Less" : "Read More";
+        // شاشة صغيرة
+        shortText = storedLanguage === "ar" ? shortText_sm_ar : shortText_sm_en;
+        fullText = storedLanguage === "ar" ? fullText_sm_ar : fullText_sm_en;
     }
+
+    txt.innerHTML = isExpanded ? fullText : shortText;
+    toggleBtn_1.innerHTML = isExpanded ? (storedLanguage === "ar" ? "عرض أقل" : "Show Less") : (storedLanguage === "ar" ? "أقرأ المزيد" : "Read More");
 }
 
+// استعادة حالة التوسيع من التخزين المحلي
 const isExpandedStored = localStorage.getItem("isExpanded") === "true";
 let isExpanded = isExpandedStored; 
-updateText(isExpanded); 
+updateText(isExpanded);
+
+// التعامل مع حدث الضغط على الزر لتغيير حالة النص
 toggleBtn_1.addEventListener("click", () => {
-    isExpanded = !isExpanded; 
-    localStorage.setItem("isExpanded", isExpanded); 
-    updateText(isExpanded); 
+    isExpanded = !isExpanded;
+    localStorage.setItem("isExpanded", isExpanded);
+    updateText(isExpanded);
 });
-// update botton more and less read 
+
+// تحديث النص عند تحميل الصفحة
 document.addEventListener("DOMContentLoaded", () => {
-    // Complete the showTxt function for English
     function showTxt() {
-        const isExpanded = localStorage.getItem("isExpanded");
-        const storedLanguage = localStorage.getItem("language");
-
-        if (storedLanguage === "ar") {
-            // Arabic case
-            if (isExpanded === "true") {
-                txt.innerHTML = fullText_ar; // Set full Arabic text
-                toggleBtn_1.innerHTML = "عرض أقل"; // Set button text to "Show Less"
-            } else {
-                txt.innerHTML = shortText_ar; // Set short Arabic text
-                toggleBtn_1.innerHTML = "أقرأ المزيد"; // Set button text to "Read More"
-            }
-        } else {
-            // English case
-            if (isExpanded === "true") {
-                txt.innerHTML = fullText_en; // Set full English text
-                toggleBtn_1.innerHTML = "Show Less"; // Set button text to "Show Less"
-            } else {
-                txt.innerHTML = shortText_en; // Set short English text
-                toggleBtn_1.innerHTML = "Read More"; // Set button text to "Read More"
-            }
-        }
+        const isExpanded = localStorage.getItem("isExpanded") === "true";
+        updateText(isExpanded);
     }
-    
-    // Call the function to display the text on page load
+
     showTxt();
+
+    // إعادة تحميل النصوص عند تغيير حجم الشاشة
+    window.addEventListener("resize", () => {
+        updateText(isExpanded);
+    });
 });
 
 
-// change direction based on language 
-const offcanvasElement = document.getElementById("offcanvasNavbar");
 
-function updateOffcanvasDirection() {
-    const storedLanguage = localStorage.getItem("language");
 
-    if (storedLanguage === "ar") {
-        offcanvasElement.classList.remove("offcanvas-start");
-        offcanvasElement.classList.add("offcanvas-end"); // لفتح القائمة من اليمين
-    } else {
-        offcanvasElement.classList.remove("offcanvas-end");
-        offcanvasElement.classList.add("offcanvas-start"); // لفتح القائمة من الشمال
-    }
-}
-// call fub when load page 
-document.addEventListener("DOMContentLoaded", () => {
-    updateOffcanvasDirection();
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // update directino when cgange language 
 languageSelectors.forEach(selector => {
