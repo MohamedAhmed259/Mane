@@ -202,6 +202,7 @@ nav a:hover {
 }
 .who .row .info-company .txt{
     text-align: justify;
+    white-space: pre-wrap;
 }
 
 .who .row .info-company  .txt a{
