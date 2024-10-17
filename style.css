@@ -255,8 +255,10 @@ nav a:hover {
         left: 3%;
         bottom: -210px !important;
     }
-    .who .row .info-company  .txt{
+    .who .row .info-company .txt{
         width: 100% !important;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
         /* text-align: justify; */
     }
 }
