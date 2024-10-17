@@ -399,10 +399,10 @@ footer a {
     .footer .row article{
         width: 33%;
     }
-    .footer{
+    /* .footer{
         padding-left: 1.8rem !important;
         padding-right: 1.8rem !important;
-    }
+    } */
 }
 @media (max-width: 768px) {
     .footer .row article{
