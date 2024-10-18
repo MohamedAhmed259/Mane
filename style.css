@@ -220,7 +220,7 @@ header .txt a{
 /* sm screen */
 @media (max-width: 767px) {
     header{
-        height: 28vh;
+        height: 29vh;
     }
     header .navbar .container #bot1 #talk-us{
         display: none;
@@ -502,7 +502,7 @@ footer a {
     }
 }
 /* end footer  */
-/* @keyframes scaleAnimation {
+@keyframes scaleAnimation {
     0% { 
         transform: scale(1); 
     }
@@ -512,7 +512,7 @@ footer a {
     100% { 
         transform: scale(1); 
     }
-} */
+}
 /* Apply the animation to the desired element */
 .animat {
     animation: scaleAnimation 1s ease-in-out infinite; /* Adjust duration and easing as needed */
