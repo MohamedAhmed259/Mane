@@ -465,10 +465,11 @@ footer {
     }
 }
 
-
 footer a {
     color: #ffffff;
+    padding-top: .75rem !important;
 }
+
 .footer .row article{
     width: 30%;
 }
