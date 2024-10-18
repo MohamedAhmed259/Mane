@@ -118,7 +118,7 @@ header .navbar .container #bot1 #talk-us{
 
 @media (max-width: 767.98px) {
     header .txt {
-        height: 18.3vh;
+        height: 17.6vh;
     }
 }
 
@@ -137,29 +137,16 @@ header .navbar .container #bot1 #talk-us{
 @media (max-width: 767px) {
     /* عندما تكون اللغة إنجليزية */
 
-
     body.en header .d-flex p {
         width: 98%;
         font-size: 14px ;
     }
 
     body.en header .txt {
-        padding-right: 0;
-        padding-left: 0;
+        padding-right: 12px;
+        padding-left: 12px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 header .txt a{
