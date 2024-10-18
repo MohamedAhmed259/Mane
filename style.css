@@ -428,10 +428,20 @@ nav a:hover {
     }
 }
 footer {
-    background-image: url(./img/footer.svg);
+    background-image: url(./img/footerlg.svg);
     background-size: cover;
     color: #fff;
     padding: 20px;
+}
+@media (max-width: 767px) {
+    footer{
+        background-image: url(./img/footersm.svg);
+        background-size: cover;
+        color: #fff;
+    }
+    .footer .icons-conect{
+        width: 100%;
+    }
 }
 .footer .icons-conect{
     width: 125px;
