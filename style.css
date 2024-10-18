@@ -229,12 +229,16 @@ nav a:hover {
         padding-left: 0.75rem;
         padding-right: 0.75rem;
     }
+    .who{
+        height: 43.5vh;
+    }
 }
 .who{
     overflow: hidden;
     background-image: url(./img/who\ we\ are.png);
     background-size: cover;
-    /* background-color: #EFF1FF; */
+    /* background-color: #3e54f5; */
+    height: 43.5vh;
 }
 .who .position-absolute{
     left: 3%;
@@ -302,7 +306,7 @@ nav a:hover {
 }
 .service  article{
     font-size: 14px;
-    border-radius: 10px;
+    border-radius: 0.25rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out;
     padding-left: 1rem !important;
