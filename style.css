@@ -501,7 +501,7 @@ footer a {
     }
 }
 /* end footer  */
-@keyframes scaleAnimation {
+/* @keyframes scaleAnimation {
     0% { 
         transform: scale(1); 
     }
@@ -511,7 +511,7 @@ footer a {
     100% { 
         transform: scale(1); 
     }
-}
+} */
 /* Apply the animation to the desired element */
 .animat {
     animation: scaleAnimation 1s ease-in-out infinite; /* Adjust duration and easing as needed */
