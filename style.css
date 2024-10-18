@@ -122,17 +122,6 @@ header .navbar .container #bot1 #talk-us{
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* الشاشات الصغيرة فقط (مثلاً أقل من 576px) */
 @media (max-width: 767px) {
     /* عندما تكون اللغة إنجليزية */
@@ -146,8 +135,11 @@ header .navbar .container #bot1 #talk-us{
         padding-right: 12px;
         padding-left: 12px;
     }
+    body.en .hero-two #btn-2 {
+        padding-right: 12px !important;
+        padding-left: 12px !important;
+    }
 }
-
 
 header .txt a{
     background-color: white;
