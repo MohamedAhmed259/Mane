@@ -118,9 +118,48 @@ header .navbar .container #bot1 #talk-us{
 
 @media (max-width: 767.98px) {
     header .txt {
-        height: 135.5px;
+        height: 18.3vh;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* الشاشات الصغيرة فقط (مثلاً أقل من 576px) */
+@media (max-width: 767px) {
+    /* عندما تكون اللغة إنجليزية */
+
+
+    body.en header .d-flex p {
+        width: 98%;
+        font-size: 14px ;
+    }
+
+    body.en header .txt {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 header .txt a{
@@ -181,7 +220,7 @@ header .txt a{
 /* sm screen */
 @media (max-width: 767px) {
     header{
-        height: 207px;
+        height: 28vh;
     }
     header .navbar .container #bot1 #talk-us{
         display: none;
@@ -192,7 +231,7 @@ header .txt a{
     header .d-flex p{
         color: white;
         font-size: 14px !important;
-        width: 80%;
+        width: 80% ;
         padding-left: 0!important;
         padding-right: 0!important;
     }
@@ -229,16 +268,16 @@ nav a:hover {
         padding-left: 0.75rem;
         padding-right: 0.75rem;
     }
-    .who{
+    /* .who{
         height: 43.5vh;
-    }
+    } */
 }
 .who{
     overflow: hidden;
     background-image: url(./img/who\ we\ are.png);
     background-size: cover;
     /* background-color: #3e54f5; */
-    height: 43.5vh;
+    /* height: 43.5vh; */
 }
 .who .position-absolute{
     left: 3%;

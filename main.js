@@ -367,6 +367,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    // احصل على اللغة المخزنة
+    let storedLanguage = localStorage.getItem("language") || "ar"; // اجعل اللغة الافتراضية "ar" إذا لم يتم تخزين أي لغة
+    
+    // حدد عنصر body
+    const bodyElement = document.querySelector("body");
+    
+    // تحديث كلاس body بناءً على اللغة
+    function updateLanguageClass() {
+        if (storedLanguage === "en") {
+            bodyElement.classList.add("en");  // إضافة كلاس 'en' إذا كانت اللغة إنجليزية
+            bodyElement.classList.remove("ar"); // إزالة كلاس 'ar' إذا كانت موجودة
+        } else {
+            bodyElement.classList.add("ar");  // إضافة كلاس 'ar' إذا كانت اللغة عربية
+            bodyElement.classList.remove("en"); // إزالة كلاس 'en' إذا كانت موجودة
+        }
+    }
+
+    // استدعاء الدالة لتطبيق التصميم بناءً على اللغة الحالية عند تحميل الصفحة
+    updateLanguageClass();
+
+    // التحديث عند تغيير اللغة
+    const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic"); // استخدام querySelectorAll
+    languageSelectors.forEach(selector => {
+        selector.addEventListener("click", (event) => {
+            const language = event.target.dataset.attr === "language-en" ? "en" : "ar";
+            localStorage.setItem("language", language);
+            storedLanguage = language; // تحديث اللغة المخزنة
+            updateLanguageClass(); // تحديث الواجهة بعد تغيير اللغة
+        });
+    });
+});
+
+
+
+
+
+
+
+
 
 
 
