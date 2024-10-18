@@ -369,6 +369,7 @@ nav a:hover {
 .hero-two{
     background-image: url(./img/Background\ pattern.svg);
     background-size: cover;
+    /* height: 100vh; */
 }
 .hero-two p{
     width: 706px;
