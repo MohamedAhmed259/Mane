@@ -330,7 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (storedLanguage === "ar") {
                 if (screenWidth >= 992) {
                     // الشاشات الكبيرة باللغة العربية
-                    article.style.height = "185px";
+                    article.style.height = "200px";
                 } else if (screenWidth >= 768 && screenWidth < 992) {
                     // الشاشات المتوسطة باللغة العربية
                     article.style.height = "180px";
@@ -338,7 +338,7 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 if (screenWidth >= 992) {
                     // الشاشات الكبيرة باللغة الإنجليزية
-                    article.style.height = "220px";
+                    article.style.height = "245px";
                 } else if (screenWidth >= 768 && screenWidth < 992) {
                     // الشاشات المتوسطة باللغة الإنجليزية
                     article.style.height = "180px";

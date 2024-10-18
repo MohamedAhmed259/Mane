@@ -44,7 +44,7 @@ header {
         padding-right: 0.75rem;
     }
     header .navbar #menu-icon{
-        width: 30px;
+        width: 32px;
     }
 }
 header .offcanvas{
@@ -62,11 +62,9 @@ header .navbar .container #bot1{
 header .navbar .container #bot1 .btn-g{ 
     cursor: pointer;
 }
-header .navbar  .menu-toggle{ 
+/* header .navbar .menu-toggle{ 
     border-color: #EFF1FF;
-}
-
-
+} */
 
 @media (max-width: 767px) {
 
@@ -267,9 +265,6 @@ nav a:hover {
     }
     .who .row .info-company .txt{
         width: 100% !important;
-        /* padding-left: 0.75rem; */
-        /* padding-right: 0.75rem; */
-        /* text-align: justify; */
     }
 }
 /* end who are we  */
@@ -307,9 +302,11 @@ nav a:hover {
 }
 .service  article{
     font-size: 14px;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
 }
 .service  article:hover{
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -360,6 +357,9 @@ nav a:hover {
     #hero-two{
         padding-left: 0.75rem;
         padding-right: 0.75rem;
+    }
+    .hero-two .txt{
+        font-size: 1rem !important;
     }
 }
 .hero-two{
