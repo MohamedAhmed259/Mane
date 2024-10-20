@@ -403,26 +403,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // update offcanvasElement directino when cgange language 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -464,6 +444,38 @@ document.addEventListener("DOMContentLoaded", () => {
 // direction of swiper 
 document.addEventListener("DOMContentLoaded", () => {
     const swiperEl = document.getElementById("service-swiper");
+
+    function dirSwiper() {
+        const storedLanguage = localStorage.getItem("language");
+        const direction = storedLanguage === "ar" ? "rtl" : "ltr";
+
+        const currentSlide = swiperEl.swiper?.activeIndex || 0;
+
+        swiperEl.setAttribute("dir", direction);
+
+        const parent = swiperEl.parentNode;
+        parent.removeChild(swiperEl);
+        parent.appendChild(swiperEl);
+
+        swiperEl.addEventListener('ready', () => {
+            swiperEl.swiper.slideTo(currentSlide);
+        });
+    }
+
+    dirSwiper();
+
+    const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic, .btn-en, .btn-ar");
+    languageSelectors.forEach(selector => {
+        selector.addEventListener("click", (event) => {
+            const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
+            setLanguage(language);
+            localStorage.setItem("language", language);
+            dirSwiper();
+        });
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const swiperEl = document.getElementById("customs-swiper");
 
     function dirSwiper() {
         const storedLanguage = localStorage.getItem("language");
