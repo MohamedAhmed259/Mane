@@ -474,6 +474,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+// direction of custom swiper 
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const swiperEl = document.getElementById("customs-swiper");
 
@@ -506,6 +510,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+// direction of  custom swiper 
 
 document.addEventListener("DOMContentLoaded", () => {
     const imgElement = document.getElementById("dynamic-img");
