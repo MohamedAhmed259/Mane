@@ -330,17 +330,18 @@
             <h1 class="fw-bold" data-attr="partners-success-title">شركاء <span class="word-color">النجاح</span></h1>
             <p class="line" data-attr=""></p>
         </div>
-        <div class="mt-5">
+        <div class="mt-5 swiper">
             <swiper-container
-                dir="rtl"
-                class="mySwiper" 
+                id="customs-swiper"
+                class="mySwiper"
                 loop="true" 
-                speed="800" 
-                space-between="30"
+                speed="800"
                 autoplay="true"
                 autoplay-delay="0" 
                 autoplay-disable-on-interaction="false"
-                navigation="false"   
+                space-between="30"
+                navigation="false"
+                pagination="false"
                 breakpoints='{
                     "360": {
                         "slidesPerView": 5
@@ -355,6 +356,7 @@
                         "slidesPerView": 9
                     }
                 }'
+                
             >
                 <swiper-slide>
                     <div class="image-container d-flex justify-content-center align-items-center">
