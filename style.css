@@ -294,8 +294,15 @@ nav a:hover {
 .who .row .info-company .txt{
     text-align: justify;
     white-space: pre-wrap;
+    width: 480px;
 }
-
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .who .row .info-company .txt{
+        text-align: justify;
+        white-space: pre-wrap;
+        width: 400px;
+    }
+}
 .who .row .info-company  .txt a{
     color: #2F2B73 !important;
 }
@@ -327,9 +334,13 @@ nav a:hover {
         padding-right: 1.5rem;
     }
 }
-.service .content .row p{
+.service article p{
     text-align: justify;
 }
+body.en .service article p{
+    text-align: initial;
+}
+
 .service .content .row{
     padding-left: 0.75rem;
     padding-right: 0.75rem;
