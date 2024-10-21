@@ -609,8 +609,8 @@ document.addEventListener("DOMContentLoaded", () => {
             autoplay: true,
             autoplaySpeed: 0,
             infinite: true,
-            speed: 600,
-            slidesToShow: 9,
+            speed: 800,
+            slidesToShow: 8,
             slidesToScroll: 1,
             cssEase: 'linear',
             rtl: direction === 'rtl', // تعيين الاتجاه هنا
@@ -644,7 +644,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateSlick();
 
     // تحديث الاتجاه عند تغيير اللغة
-    const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic, .btn-en, .btn-ar");
+    const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic");
     languageSelectors.forEach(selector => {
         selector.addEventListener("click", (event) => {
             const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
