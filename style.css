@@ -231,15 +231,15 @@ header .txt a{
     header .d-flex p{
         color: white;
         font-size: 18px !important;
-        width: 66% ;
+        width: 90% ;
         padding-left: 0!important;
         padding-right: 0!important;
         margin-top: 16px !important;
-        margin-bottom: 24px !important;
+        margin-bottom: 8px !important;
     }
     body.en header .d-flex p{
         color: white;
-        font-size: 19.86px !important;
+        font-size: 13.86px !important;
         width: 99% ;
         padding-left: 0!important;
         padding-right: 0!important;
