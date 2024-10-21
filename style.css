@@ -349,9 +349,9 @@ nav a:hover {
 .service article p{
     text-align: justify;
 }
-.service  article{
+/* .service  article{
     justify-content: space-evenly !important;
-}
+} */
 /* body.en .service article p{
     text-align: initial;
 } */
