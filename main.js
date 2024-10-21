@@ -235,7 +235,6 @@ function updateText(isExpanded) {
     const storedLanguage = localStorage.getItem("language");
     const width = window.innerWidth;
     let shortText, fullText;
-
     if (width >= 1200) {
         // large screen
         shortText = storedLanguage === "ar" ? shortText_lg_ar : shortText_lg_en;
