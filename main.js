@@ -567,7 +567,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateImageBasedOnLanguage() {
         const storedLanguage = localStorage.getItem("language");
         if (storedLanguage === "ar") {
-            imgElement.src = "./img/Layer 1.png";
+            imgElement.src = "./img/Layer 1.svg";
             menuIcon.src = "./img/menu ar.svg";
             copyright.classList.add("text-end");
             developedBy.classList.add("text-start");
