@@ -221,7 +221,6 @@ languageSelectors.forEach(selector => {
         const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
         setLanguage(language);
         localStorage.setItem("language", language);
-
         updateDisplay();
     });
 });
@@ -230,24 +229,6 @@ window.addEventListener("resize", updateDisplay);
 // toggle display txt
 const txt = document.querySelector(".who .row .info-company .txt");
 const toggleBtn_1 = document.getElementById("toggleBtn-1");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // show text in large screen
 const shortText_lg_ar = "تأسســـت شركــــة  'ماني للمحامــــاة'  عـام  1441 هــ بهـــدف تقــــديـم خـدمــــــــات قانـونيــــــة متكــامـلـــــة تـــواكــــب التـطــــــورات القانونيـــــــة المحــليــــة والــدوليـــة. على مــدى السنـــــوات الماضيـــــة، اسـتطــــاعـت الشـركـــــة أن تـبنـــــي سـمعــــة قوية كشـــريك موثــــوق للعمــلاء من مختلـــــف القـطــــاعـــات، بـمــا فــي ذلـــك الشــــركـــات الكبيـــــرة، الأفــراد، والـمـؤسســات الحكـوميــة بفـضــل فـــريـق مــن المحامين ذوي الخبرة الواسعة، حيث تصل خبرات المحامين إلى 10 سنوات فـي مجـالات قانونيـة متـعـددة، تمـيـزت   ماني  بتقـديـم حلـول قانونيـة مبتكـرة وفعّالة تلبي احتياجات عملائها...";
@@ -275,15 +256,15 @@ function updateText(isExpanded) {
     let shortText, fullText;
 
     if (width >= 1200) {
-        // شاشة كبيرة
+        // large screen
         shortText = storedLanguage === "ar" ? shortText_lg_ar : shortText_lg_en;
         fullText = storedLanguage === "ar" ? fullText_lg_ar : fullText_lg_en;
     } else if (width >= 768) {
-        // شاشة متوسطة
+        // medium screen
         shortText = storedLanguage === "ar" ? shortText_md_ar : shortText_md_en;
         fullText = storedLanguage === "ar" ? fullText_md_ar : fullText_md_en;
     } else {
-        // شاشة صغيرة
+        // small screen
         shortText = storedLanguage === "ar" ? shortText_sm_ar : shortText_sm_en;
         fullText = storedLanguage === "ar" ? fullText_sm_ar : fullText_sm_en;
     }
@@ -292,28 +273,26 @@ function updateText(isExpanded) {
     toggleBtn_1.innerHTML = isExpanded ? (storedLanguage === "ar" ? "عرض أقل" : "Show Less") : (storedLanguage === "ar" ? "أقرأ المزيد" : "Read More");
 }
 
-// استعادة حالة التوسيع من التخزين المحلي
+// Restore expansion state from local storage
 const isExpandedStored = localStorage.getItem("isExpanded") === "true";
 let isExpanded = isExpandedStored; 
 updateText(isExpanded);
 
-// التعامل مع حدث الضغط على الزر لتغيير حالة النص
+//Handle the button press event to change the text state
 toggleBtn_1.addEventListener("click", () => {
     isExpanded = !isExpanded;
     localStorage.setItem("isExpanded", isExpanded);
     updateText(isExpanded);
 });
 
-// تحديث النص عند تحميل الصفحة
+// Update text when page loads
 document.addEventListener("DOMContentLoaded", () => {
     function showTxt() {
         const isExpanded = localStorage.getItem("isExpanded") === "true";
         updateText(isExpanded);
     }
-
     showTxt();
-
-    // إعادة تحميل النصوص عند تغيير حجم الشاشة
+    // Reload texts when screen size changes
     window.addEventListener("resize", () => {
         updateText(isExpanded);
     });
@@ -321,39 +300,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const articles = document.querySelectorAll(".service .content .row article");
-
     function updateArticleHeight() {
         const storedLanguage = localStorage.getItem("language");
         const screenWidth = window.innerWidth;
-
         articles.forEach(article => {
             if (storedLanguage === "ar") {
                 if (screenWidth >= 992) {
-                    // الشاشات الكبيرة باللغة العربية
+                    // Big screens in Arabic
                     article.style.minHeight = "210px";
                 } else if (screenWidth >= 768 && screenWidth < 992) {
-                    // الشاشات المتوسطة باللغة العربية
+                    // Medium screens in Arabic
                     article.style.minHeight = "190px";
                 }
             } else {
                 if (screenWidth >= 992) {
-                    // الشاشات الكبيرة باللغة الإنجليزية
+                    // Large screens in English
                     article.style.minHeight = "225px";
                 } else if (screenWidth >= 768 && screenWidth < 992) {
-                    // الشاشات المتوسطة باللغة الإنجليزية
+                    //Medium screens in English
                     article.style.minHeight = "185px";
                 }
             }
         });
     }
-
-    // استدعاء الدالة عند تحميل الصفحة
+    // call the function when the page is loads
     updateArticleHeight();
-
-    // تحديث الارتفاع عند تغيير حجم النافذة
+    // Update height when window size is changed
     window.addEventListener("resize", updateArticleHeight);
-
-    // تحديث الارتفاع عند تغيير اللغة
+    // Update height when changing language
     const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic");
     languageSelectors.forEach(selector => {
         selector.addEventListener("click", () => {
@@ -363,26 +337,21 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 document.addEventListener("DOMContentLoaded", () => {
     const articleElements = document.querySelectorAll('.responsive article');
-
     function updateArticleHeight() {
         const storedLanguage = localStorage.getItem("language");
-
         articleElements.forEach(article => {
             if (storedLanguage === "ar") {
-                article.style.minHeight = '200px'; // تعيين الحد الأدنى للارتفاع إلى 180px عند اللغة العربية
+                article.style.minHeight = '200px';
             } else {
-                article.style.minHeight = '240px'; // تعيين الحد الأدنى للارتفاع إلى 200px عند اللغة الإنجليزية
+                article.style.minHeight = '240px';
             }
         });
     }
-
-    // استدعاء الدالة عند تحميل الصفحة
+    // call the function when  the page loads
     updateArticleHeight();
-
-    // تحديث الارتفاع عند تغيير حجم النافذة
+    // Update height when window size is changed
     window.addEventListener("resize", updateArticleHeight);
-
-    // تحديث الارتفاع عند تغيير اللغة
+    // Update height when changing language
     const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic");
     languageSelectors.forEach(selector => {
         selector.addEventListener("click", () => {
@@ -390,54 +359,42 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
 function setArticleMinHeight() {
     const storedLanguage = localStorage.getItem("language");
     const articleElements = document.querySelectorAll('.responsive article');
-
     articleElements.forEach(article => {
         if (storedLanguage === "ar") {
-            article.style.minHeight = '180px'; // تعيين الحد الأدنى للارتفاع إلى 180px عند اللغة العربية
+            article.style.minHeight = '180px';
         } else {
-            article.style.minHeight = '200px'; // تعيين الحد الأدنى للارتفاع إلى 200px عند اللغة الإنجليزية
+            article.style.minHeight = '200px';
         }
     });
 }
 
-
-
-
-
-
+// add class en in body if language is stored is en 
 document.addEventListener("DOMContentLoaded", () => {
-    // احصل على اللغة المخزنة
-    let storedLanguage = localStorage.getItem("language") || "ar"; // اجعل اللغة الافتراضية "ar" إذا لم يتم تخزين أي لغة
-    
-    // حدد عنصر body
+    // get  the LANGUAGE is stored
+    let storedLanguage = localStorage.getItem("language") || "ar"; // Make the default language "ar" if no language is stored
     const bodyElement = document.querySelector("body");
-    
-    // تحديث كلاس body بناءً على اللغة
     function updateLanguageClass() {
         if (storedLanguage === "en") {
-            bodyElement.classList.add("en");  // إضافة كلاس 'en' إذا كانت اللغة إنجليزية
-            bodyElement.classList.remove("ar"); // إزالة كلاس 'ar' إذا كانت موجودة
+            bodyElement.classList.add("en");
+            bodyElement.classList.remove("ar");
         } else {
-            bodyElement.classList.add("ar");  // إضافة كلاس 'ar' إذا كانت اللغة عربية
-            bodyElement.classList.remove("en"); // إزالة كلاس 'en' إذا كانت موجودة
+            bodyElement.classList.add("ar");
+            bodyElement.classList.remove("en");
         }
     }
-
-    // استدعاء الدالة لتطبيق التصميم بناءً على اللغة الحالية عند تحميل الصفحة
+// Call the function to apply the design based on the current language when the page loads
     updateLanguageClass();
-
-    // التحديث عند تغيير اللغة
-    const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic"); // استخدام querySelectorAll
+    // Update when changing language
+    const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic");
     languageSelectors.forEach(selector => {
         selector.addEventListener("click", (event) => {
             const language = event.target.dataset.attr === "language-en" ? "en" : "ar";
             localStorage.setItem("language", language);
-            storedLanguage = language; // تحديث اللغة المخزنة
-            updateLanguageClass(); // تحديث الواجهة بعد تغيير اللغة
+            storedLanguage = language; // Update stored language
+            updateLanguageClass(); // Update interface after changing language
         });
     });
 });
@@ -448,94 +405,48 @@ document.addEventListener("DOMContentLoaded", () => {
 // update offcanvasElement directino when cgange language 
 
 document.addEventListener("DOMContentLoaded", () => {
-    // تحديث الاتجاه الخاص بـ Offcanvas بناءً على اللغة
+    // Update Offcanvas direction based on language
     function updateOffcanvasDirection() {
         const storedLanguage = localStorage.getItem("language");
         const offcanvasElement = document.getElementById("offcanvasNavbar");
-
         if (storedLanguage === "ar") {
             offcanvasElement.classList.add("offcanvas-end");
             offcanvasElement.classList.remove("offcanvas-start");
         } else {
-            // إزالة اتجاه RTL للقائمة
+            // Remove RTL direction of the list
             offcanvasElement.setAttribute("dir", "ltr");
             offcanvasElement.classList.add("offcanvas-start");
             offcanvasElement.classList.remove("offcanvas-end");
         }
     }
 
-    // استدعاء الدالة لتحديث الاتجاه عند تحميل الصفحة
+// Call the function to update the direction when the page loads
     updateOffcanvasDirection();
 
-    // التعامل مع تغييرات اللغة
+    // Handling language changes
     const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic, .btn-en, .btn-ar");
     languageSelectors.forEach(selector => {
         selector.addEventListener("click", (event) => {
             const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
             localStorage.setItem("language", language);
-
-            // تحديث اتجاه الـ Offcanvas بناءً على اللغة
+            // Update Offcanvas direction based on language
             updateOffcanvasDirection();
         });
     });
 });
-
-// initialize owl-carousel
-// $('.btn-en-glish, .btn-ar-abic').on('click', function() {
-//     const language = $(this).data('attr') === "language-ar" ? "ar" : "en";
-//     localStorage.setItem("language", language);
-//     $('.owl-carousel').trigger('destroy.owl.carousel'); // Destroy the current instance
-//     initializeOwlCarousel(); // Reinitialize with updated settings
-// });
-// function initializeOwlCarousel() {
-//     const isRtl = localStorage.getItem("language") === "ar";
-
-//     $('.owl-carousel').owlCarousel({
-//         loop: true,
-//         margin: 30,
-//         nav: false,
-//         dots: false,
-//         // autoplay: true,
-//         // autoplayTimeout: 1000,
-//         rtl: isRtl,
-//         responsive: {
-//             0: {
-//                 items: 1
-//             },
-//             600: {
-//                 items: 1
-//             },
-//             960: {
-//                 items: 1
-//             },
-//             1200: {
-//                 items: 1
-//             }
-//         }
-//     });
-// }
-// $(document).ready(function() {
-//     initializeOwlCarousel();
-// });
-
-
-
+// Function to set direction and update slick service
 document.addEventListener("DOMContentLoaded", () => {
     const responsiveCustoms = $('.responsive');
-
-    // دالة لتعيين الاتجاه وتحديث السليك
+    // Function to set direction and update slick service
     function updateSlick() {
         const storedLanguage = localStorage.getItem("language");
-
-        // تغيير الاتجاه بناءً على اللغة
+        // Change direction based on language
         const direction = storedLanguage === "ar" ? 'rtl' : 'ltr';
-        
-        // تحقق مما إذا كان الـ Slick قد تم تهيئته
+        // Check if the Slick has been initialized
         if (responsiveCustoms.hasClass('slick-initialized')) {
-            responsiveCustoms.slick('unslick'); // تدمير السليك فقط إذا تم تهيئته
+            responsiveCustoms.slick('unslick'); //Destroy the slick only if it is initialized.
         }
-
-        // إعادة تهيئة السليك مع الاتجاه الجديد
+        // Reconfigure the slick with the new direction.
         responsiveCustoms.slick({
             dots: true,
             autoplay: true,
@@ -546,7 +457,7 @@ document.addEventListener("DOMContentLoaded", () => {
             slidesToShow: 1,
             slidesToScroll: 1,
             cssEase: 'linear',
-            rtl: direction === 'rtl', // تعيين الاتجاه هنا
+            rtl: direction === 'rtl', // direction
             responsive: [
                 {
                     breakpoint: 1200,
@@ -572,37 +483,31 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         });
     }
-
-    // استدعاء الدالة لتعيين الاتجاه عند تحميل الصفحة
+    // Call the function to set the direction when the page loads
     updateSlick();
-
-    // تحديث الاتجاه عند تغيير اللغة
+    // Update direction when changing language
     const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic, .btn-en, .btn-ar");
     languageSelectors.forEach(selector => {
         selector.addEventListener("click", (event) => {
             const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
             setLanguage(language);
             localStorage.setItem("language", language);
-            updateSlick(); // تحديث الاتجاه وإعادة تهيئة السليك
+            updateSlick(); // Update direction and re-initialize the slick
         });
     });
 });
 document.addEventListener("DOMContentLoaded", () => {
     const responsiveCustoms = $('.responsive-customs');
-
-    // دالة لتعيين الاتجاه وتحديث السليك
+    // Function to set direction and update slick
     function updateSlick() {
         const storedLanguage = localStorage.getItem("language");
-
-        // تغيير الاتجاه بناءً على اللغة
+        // Change direction based on language
         const direction = storedLanguage === "ar" ? 'rtl' : 'ltr';
-        
-        // تحقق مما إذا كان الـ Slick قد تم تهيئته
+        // Check if the Slick has been initialized
         if (responsiveCustoms.hasClass('slick-initialized')) {
-            responsiveCustoms.slick('unslick'); // تدمير السليك فقط إذا تم تهيئته
+            responsiveCustoms.slick('unslick'); //Destroy the slick only if it is initialized.
         }
-
-        // إعادة تهيئة السليك مع الاتجاه الجديد
+        // Reconfigure the wire with the new direction.
         responsiveCustoms.slick({
             // dots: true,
             arrows: false,
@@ -613,7 +518,7 @@ document.addEventListener("DOMContentLoaded", () => {
             slidesToShow: 8,
             slidesToScroll: 1,
             cssEase: 'linear',
-            rtl: direction === 'rtl', // تعيين الاتجاه هنا
+            rtl: direction === 'rtl', // direction
             responsive: [
                 {
                     breakpoint: 1200,
@@ -640,94 +545,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // استدعاء الدالة لتعيين الاتجاه عند تحميل الصفحة
     updateSlick();
-
-    // تحديث الاتجاه عند تغيير اللغة
+    // Update direction when changing language
     const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic");
     languageSelectors.forEach(selector => {
         selector.addEventListener("click", (event) => {
             const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
             setLanguage(language);
             localStorage.setItem("language", language);
-            updateSlick(); // تحديث الاتجاه وإعادة تهيئة السليك
+            updateSlick(); // Update direction and re-initialize the slick
         });
     });
 });
-
-
-
-
-// direction of swiper 
-// document.addEventListener("DOMContentLoaded", () => {
-//     const swiperEl = document.getElementById("service-swiper");
-
-//     function dirSwiper() {
-//         const storedLanguage = localStorage.getItem("language");
-//         const direction = storedLanguage === "ar" ? "rtl" : "ltr";
-
-//         const currentSlide = swiperEl.swiper?.activeIndex || 0;
-
-//         swiperEl.setAttribute("dir", direction);
-
-//         const parent = swiperEl.parentNode;
-//         parent.removeChild(swiperEl);
-//         parent.appendChild(swiperEl);
-
-//         swiperEl.addEventListener('ready', () => {
-//             swiperEl.swiper.slideTo(currentSlide);
-//         });
-//     }
-
-//     dirSwiper();
-
-//     const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic, .btn-en, .btn-ar");
-//     languageSelectors.forEach(selector => {
-//         selector.addEventListener("click", (event) => {
-//             const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
-//             setLanguage(language);
-//             localStorage.setItem("language", language);
-//             dirSwiper();
-//         });
-//     });
-// });
-// direction of custom swiper 
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     const swiperEl = document.getElementById("customs-swiper");
-
-//     function dirSwiper() {
-//         const storedLanguage = localStorage.getItem("language");
-//         const direction = storedLanguage === "ar" ? "rtl" : "ltr";
-
-//         const currentSlide = swiperEl.swiper?.activeIndex || 0;
-
-//         swiperEl.setAttribute("dir", direction);
-
-//         const parent = swiperEl.parentNode;
-//         parent.removeChild(swiperEl);
-//         parent.appendChild(swiperEl);
-
-//         swiperEl.addEventListener('ready', () => {
-//             swiperEl.swiper.slideTo(currentSlide);
-//         });
-//     }
-
-//     dirSwiper();
-
-//     const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic, .btn-en, .btn-ar");
-//     languageSelectors.forEach(selector => {
-//         selector.addEventListener("click", (event) => {
-//             const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
-//             setLanguage(language);
-//             localStorage.setItem("language", language);
-//             dirSwiper();
-//         });
-//     });
-// });
-
-
-// direction of  custom swiper 
 
 document.addEventListener("DOMContentLoaded", () => {
     const imgElement = document.getElementById("dynamic-img");
@@ -737,31 +566,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updateImageBasedOnLanguage() {
         const storedLanguage = localStorage.getItem("language");
-
         if (storedLanguage === "ar") {
             imgElement.src = "./img/Layer 1.png";
             menuIcon.src = "./img/menu ar.svg";
-
             copyright.classList.add("text-end");
             developedBy.classList.add("text-start");
-
             copyright.classList.remove("text-start");
             developedBy.classList.remove("text-end");
-
         } else {
             imgElement.src = "./img/Layer-english.svg";
             menuIcon.src = "./img/menu en.svg"; 
-
             copyright.classList.add("text-start");
             developedBy.classList.add("text-end");
-
             copyright.classList.remove("text-end");
             developedBy.classList.remove("text-start");
         }
     }
     
     updateImageBasedOnLanguage();
-
     const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic");
     languageSelectors.forEach(selector => {
         selector.addEventListener("click", (event) => {

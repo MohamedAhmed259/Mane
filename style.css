@@ -11,13 +11,10 @@
 .word-color{
     color: #5958B5 !important;
 }
-
-
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
-
 body {
     font-family: "Tajawal", sans-serif;
     margin: 0;
@@ -30,16 +27,12 @@ header {
     background-color: #322e76;
     text-align: center;
     height: 675px;
-    /* position: fixed; */
-    /* width: 100%; */
 }
-
 @media (min-width: 768px) and (max-width: 991.98px) {
     header .navbar #menu-icon{
         width: 48px;
     }
 }
-
 @media (max-width: 767.98px) {
     header{
         padding-left: 0.75rem;
@@ -64,12 +57,7 @@ header .navbar .container #bot1{
 header .navbar .container #bot1 .btn-g{ 
     cursor: pointer;
 }
-/* header .navbar .menu-toggle{ 
-    border-color: #EFF1FF;
-} */
-
 @media (max-width: 767px) {
-
     header .navbar .container #bot1{ 
         align-items: start !important;
     }
@@ -101,47 +89,37 @@ header .navbar .container #bot1 .btn-g{
         width: 16px;
     }
 }
-
-
 header .navbar .container #bot1 #talk-us{
     border: 1px solid white;
     color: white;
     margin-right: 20px;
 }
-
 body.en header .navbar .container #bot1 #talk-us{
     margin-left: 20px;
 }
 .offcanvas {
-    width: 250px; /* Adjust the width as needed */
+    width: 250px;
 }
 @media (min-width: 992px) {
     header .txt {
         height: 562px;
     }
 }
-
 @media (min-width: 768px) and (max-width: 991.98px) {
     header .txt {
         height: 306px;
     }
 }
-
 @media (max-width: 767.98px) {
     header .txt {
         height: 17.6vh;
     }
 }
-
-/* الشاشات الصغيرة فقط (مثلاً أقل من 576px) */
 @media (max-width: 767px) {
-    /* عندما تكون اللغة إنجليزية */
-
     body.en header .d-flex p {
         width: 93%;
         font-size: 15px !important;
     }
-
     body.en header .txt {
         padding-right: 12px;
         padding-left: 12px;
@@ -151,14 +129,10 @@ body.en header .navbar .container #bot1 #talk-us{
         padding-left: 12px !important;
     }
 }
-
 header .txt a{
     background-color: white;
     color: #2F2B73;
 }
-/* header #toggle {
-    background-color: white;
-} */
 @media (max-width: 992px) {
     .navbar .container .image1{
         display: none !important;
@@ -182,7 +156,6 @@ header .txt a{
         font-size: 42px;
         margin-bottom: 24px !important;
     }
-
 }
 @media (min-width: 767px) and (max-width:991px) {
     header .d-flex p{
@@ -199,7 +172,6 @@ header .txt a{
         font-size: 30px;
     }
 }
-
 /* md screen */
 @media (max-width: 992px) {
     header{
@@ -229,9 +201,6 @@ header .txt a{
     header .navbar .container #bot1 #talk-us{
         display: none;
     }
-    /* header .d-flex{
-        margin-top: 5px !important;
-    } */
     header .d-flex p{
         color: white;
         font-size: 18px !important;
@@ -263,9 +232,6 @@ header .txt a{
         padding: 5px 10px !important;
         font-size: 12px;
     }
-    /* .navbar .container #bot1 img{
-        margin: 0 !important;
-    } */
 }
 header nav div ul li a{
     color: white !important;
@@ -292,8 +258,6 @@ nav a:hover {
     overflow: hidden;
     background-image: url(./img/who\ we\ are.png);
     background-size: cover;
-    /* background-color: #3e54f5; */
-    /* height: 43.5vh; */
 }
 .who .position-absolute{
     left: 3%;
@@ -349,13 +313,6 @@ nav a:hover {
 .service article p{
     text-align: justify;
 }
-/* .service  article{
-    justify-content: space-evenly !important;
-} */
-/* body.en .service article p{
-    text-align: initial;
-} */
-
 .service .content .row{
     padding-left: 0.75rem;
     padding-right: 0.75rem;
@@ -363,9 +320,6 @@ nav a:hover {
 .service .content .row a{
     color: #2F2B73;
 }
-/* .service .content .row .item-5{
-    line-height: 31px;
-} */
 .service .swiper a{
     color: #2F2B73;
     border-color: #2F2B73 !important;
@@ -373,15 +327,10 @@ nav a:hover {
 .service .swiper .mySwiper swiper-slide{
     min-height: 300px !important;
 }
-
-/* .service .swiper article{
-    min-height: 240px;
-} */
 .service  article{
     min-height: 260px;
     margin-bottom: 20px;
 }
-
 .service  article{
     font-size: 14px;
     border-radius: 0.25rem;
@@ -393,8 +342,6 @@ nav a:hover {
 .service  article:hover{
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
-
 .service .show a{
     background-color: #2F2B73;
     color: white;
@@ -459,7 +406,6 @@ nav a:hover {
 }
 /* end hero two */
 /* start customs  */
-
 @media (max-width: 768px) {
     #customs{
         padding-left: 1.5rem;
@@ -471,7 +417,6 @@ nav a:hover {
     background-color: white;
     color: black;
     text-decoration: none;
-    /* padding-top: .65rem !important; */
 }
 #btn-2:hover{
     background-color: #322e76;
@@ -480,7 +425,6 @@ nav a:hover {
     font-weight: bold;
 }
 /* start footer  */
-
 @media (max-width: 768px) {
     #footer{
         padding-left: 1.5rem !important;
@@ -514,11 +458,9 @@ footer {
         width: 100%;
     }
 }
-
 footer a {
     color: #ffffff;
 }
-
 .footer .row article{
     width: 30%;
 }
@@ -529,10 +471,6 @@ footer a {
     .footer .row article{
         width: 33%;
     }
-    /* .footer{
-        padding-left: 1.8rem !important;
-        padding-right: 1.8rem !important;
-    } */
 }
 @media (max-width: 768px) {
     .footer .row article{
@@ -562,7 +500,6 @@ footer a {
         transform: scale(1); 
     }
 }
-/* Apply the animation to the desired element */
 .animat {
-    animation: scaleAnimation 1s ease-in-out infinite; /* Adjust duration and easing as needed */
+    animation: scaleAnimation 1s ease-in-out infinite;
 }
