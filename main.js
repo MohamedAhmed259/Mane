@@ -498,8 +498,7 @@ document.addEventListener("DOMContentLoaded", () => {
             dots: true,
             autoplay: true,
             autoplaySpeed: 800,
-            
-            arrows: true,
+            arrows: false,
             infinite: true,
             speed: 800,
             slidesToShow: 1,
@@ -564,9 +563,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // إعادة تهيئة السليك مع الاتجاه الجديد
         responsiveCustoms.slick({
             // dots: true,
+            arrows: false,
             autoplay: true,
             autoplaySpeed: 500,
-            arrows: true,
             infinite: true,
             speed: 500,
             slidesToShow: 9,
