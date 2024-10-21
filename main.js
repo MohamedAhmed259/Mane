@@ -479,8 +479,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 $('.responsive').slick({
     dots: true,
-    // autoplay: true,
-    // autoplaySpeed:1000,
+    autoplay: true,
+    autoplaySpeed:1000,
     arrows: true,
     infinite: true,
     speed: 1000,
@@ -504,7 +504,7 @@ $('.responsive').slick({
         {
             breakpoint: 480,
             settings: {
-            slidesToShow: 1,
+            slidesToShow: 5,
             slidesToScroll: 1
             }
         }
