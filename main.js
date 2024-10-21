@@ -338,7 +338,7 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 if (screenWidth >= 992) {
                     // الشاشات الكبيرة باللغة الإنجليزية
-                    article.style.minHeight = "245px";
+                    article.style.minHeight = "225px";
                 } else if (screenWidth >= 768 && screenWidth < 992) {
                     // الشاشات المتوسطة باللغة الإنجليزية
                     article.style.minHeight = "185px";

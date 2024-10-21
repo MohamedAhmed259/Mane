@@ -340,9 +340,12 @@ nav a:hover {
 .service article p{
     text-align: justify;
 }
-body.en .service article p{
-    text-align: initial;
+.service .row article{
+    justify-content: center!important;
 }
+/* body.en .service article p{
+    text-align: initial;
+} */
 
 .service .content .row{
     padding-left: 0.75rem;
