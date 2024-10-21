@@ -78,7 +78,6 @@ const translations = {
         "website-icon": "رمز الموقع الإلكتروني",
         "website-text": "www.mani-law.com",
         "copyright": "كل الحقوق محفوظة &copy; 2024",
-        
     },
     en: {
         home: "Home",
@@ -160,25 +159,18 @@ const translations = {
         "website-icon": "Website Icon",
         "website-text": "www.mani-law.com",
         "copyright": "All rights reserved &copy; 2024",
-    
     }
 };
-
 // preparing the localStorage 
 document.addEventListener("DOMContentLoaded", () => {
     const storedLanguage = localStorage.getItem("language");
-
     if (!storedLanguage) {
         localStorage.setItem("language", "ar");
     }
-
     const language = localStorage.getItem("language");
     setLanguage(language); 
-
     updateDisplay();
 });
-
-
 const setLanguage = (language) => {
     const elements = document.querySelectorAll("[data-attr]");
     elements.forEach((element) => {
@@ -189,20 +181,16 @@ const setLanguage = (language) => {
     });
     document.documentElement.setAttribute("dir", language === "ar" ? "rtl" : "ltr");
 };
-
 const savedLanguage = localStorage.getItem("language") || "en";
 setLanguage(savedLanguage);
-
 const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic");
 // console.log(languageSelectors);
 let btn_en_glish = document.querySelector(".btn-en-glish"); // en
 let btn_ar_abic = document.querySelector(".btn-ar-abic");  // ar
-
 // updaate display the current language 
 function updateDisplay() {
     const storedLanguage = localStorage.getItem("language");
     const isSmallScreen = window.matchMedia("(max-width: 992px)").matches; 
-
     if (storedLanguage === "ar") {
         btn_en_glish.innerHTML = isSmallScreen ? "EN" : "English";
         btn_ar_abic.style.display = "none";
@@ -212,10 +200,8 @@ function updateDisplay() {
         btn_en_glish.style.display = "none";
         btn_ar_abic.style.display = "block";
     }
-
 };
 updateDisplay();
-
 languageSelectors.forEach(selector => {
     selector.addEventListener("click", (event) => {
         const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
@@ -229,26 +215,21 @@ window.addEventListener("resize", updateDisplay);
 // toggle display txt
 const txt = document.querySelector(".who .row .info-company .txt");
 const toggleBtn_1 = document.getElementById("toggleBtn-1");
-
 // show text in large screen
 const shortText_lg_ar = "تأسســـت شركــــة  'ماني للمحامــــاة'  عـام  1441 هــ بهـــدف تقــــديـم خـدمــــــــات قانـونيــــــة متكــامـلـــــة تـــواكــــب التـطــــــورات القانونيـــــــة المحــليــــة والــدوليـــة. على مــدى السنـــــوات الماضيـــــة، اسـتطــــاعـت الشـركـــــة أن تـبنـــــي سـمعــــة قوية كشـــريك موثــــوق للعمــلاء من مختلـــــف القـطــــاعـــات، بـمــا فــي ذلـــك الشــــركـــات الكبيـــــرة، الأفــراد، والـمـؤسســات الحكـوميــة بفـضــل فـــريـق مــن المحامين ذوي الخبرة الواسعة، حيث تصل خبرات المحامين إلى 10 سنوات فـي مجـالات قانونيـة متـعـددة، تمـيـزت   ماني  بتقـديـم حلـول قانونيـة مبتكـرة وفعّالة تلبي احتياجات عملائها...";
 const fullText_lg_ar = "تأسست شركة  'ماني للمحاماة' عام 1441 هـ بهدف تقديم خدمات قانونية متكاملة تواكب التطورات القانونية المحلية والدولية. على مدى السنوات الماضية، استطاعت الشركة أن تبني سمعة قوية كشريك موثوق للعملاء من مختلف القطاعات، بما في ذلك الشركات الكبيرة، الأفراد، والمؤسسات الحكومية. بفضل فريق من المحامين ذوي الخبرة الواسعة، حيث تصل خبرات المحامين إلى 10 سنوات في مجالات قانونية متعددة، تميزت  ماني بتقديم حلول قانونية مبتكرة وفعّالة تلبي احتياجات عملائها وتساعدهم في تحقيق أهدافهم. نلتزم في  'ماني' بالاحترافية العالية والسرية التامة، ونسعى دائماً إلى تقديم بفضل الخدمات القانونية التي تدعم عملاءنا في مواجهة التحديات القانونية المتغيرة.";
 const shortText_lg_en = "Mani Law Firm was established in with the aim of providing comprehensive legal services that keep pace with local and international legal developments. Over the past years, the firm has built a strong reputation as a trusted partner for clients across various sectors, including large corporations, individuals, and government institutions...";
 const fullText_lg_en = "Mani Law Firm was established in with the aim of providing comprehensive legal services that keep pace with local and international legal developments. Over the past years, the firm has built a strong reputation as a trusted partner for clients across various sectors, including large corporations, individuals, and government institutions. With a team of highly experienced lawyers, whose expertise spans years in various legal fields, Mani has distinguished itself by offering innovative and effective legal solutions that meet clients' needs and help them achieve their goals. At Mani, we are committed to the highest standards of professionalism and confidentiality, always striving to provide the best legal services that support our clients in facing evolving legal challenges.";
-
 // show text in mediam screen
 const shortText_md_ar = "تأسســـت شركــــة ' ماني للمحامــــاة' عام 1441 هـ بهـــدف تقــــديم خدمــــــــات قانونيــــــة متكاملـــــة تواكــــب التطــــــورات القانونيـــــــة المحليــــة والدولية. على مدى السنــــوات الماضيــــة، استطــــاعت الشركـــة أن تبنـــي سمعـــة قوية كشـــريك موثــــوق للعمــلاء من مختلـــــف القطــــاعـــات، بما في ذلك الشــــركــات الكبيــــرة، الأفراد، والمؤسسات الحكومية...";
 const fullText_md_ar = "تأسست شركة ' ماني للمحاماة ' ; عام 1441 هـ بهدف تقديم خدمات قانونية متكاملة تواكب التطورات القانونية المحلية والدولية. على مدى السنوات الماضية، استطاعت الشركة أن تبني سمعة قوية كشريك موثوق للعملاء من مختلف القطاعات، بما في ذلك الشركات الكبيرة، الأفراد، والمؤسسات الحكومية. بفضل فريق من المحامين ذوي الخبرة الواسعة، حيث تصل خبرات المحامين إلى 10 سنوات في مجالات قانونية متعددة، تميزت 'ماني' بتقديم حلول قانونية مبتكرة وفعّالة تلبي احتياجات عملائها وتساعدهم في تحقيق أهدافهم. نلتزم في ' ماني' بالاحترافية العالية والسرية التامة، ونسعى دائماً إلى تقديم أفضل الخدمات القانونية التي تدعم عملاءنا في مواجهة التحديات القانونية المتغيرة.";
 const shortText_md_en = "Mani Law Firm was established in with the aim of providing comprehensive legal services that keep pace with local and international legal developments. Over the past years, the firm has built a strong reputation as a trusted partner for clients across various sectors, including large corporations, individuals, and government institutions.. ";
 const fullText_md_en = "Mani Law Firm was established in with the aim of providing comprehensive legal services that keep pace with local and international legal developments. Over the past years, the firm has built a strong reputation as a trusted partner for clients across various sectors, including large corporations, individuals, and government institutions. With a team of highly experienced lawyers, whose expertise spans years in various legal fields, Mani has distinguished itself by offering innovative and effective legal solutions that meet clients' needs and help them achieve their goals. At Mani, we are committed to the highest standards of professionalism and confidentiality, always striving to provide the best legal services that support our clients in facing evolving legal challenges.";
-
 // show text in small screen
 const shortText_sm_ar = "تأسســـــت شركــة ' مـاني للمحـــاماة' عام 1441 هـ بهــدف تقـديم خدمــــات قانونية متكاملة تواكب التطـــورات القانونيـــة المحليـــة والدولية. على مدى السنــــوات الماضيـــة، استطـــاعت الشركة أن تبنـــي سمعـــة قوية كشريك موثوق للعملاء من مختلف القطاعات..";
 const fullText_sm_ar = "تأسست شركة 'ماني للمحاماة' عام 1441 هـ بهدف تقديم خدمات قانونية متكاملة تواكب التطورات القانونية المحلية والدولية. على مدى السنوات الماضية، استطاعت الشركة أن تبني سمعة قوية كشريك موثوق للعملاء من مختلف القطاعات، بما في ذلك الشركات الكبيرة، الأفراد، والمؤسسات الحكومية. بفضل فريق من المحامين ذوي الخبرة الواسعة، حيث تصل خبرات المحامين إلى 10 سنوات في مجالات قانونية متعددة، تميزت ' ماني' بتقديم حلول قانونية مبتكرة وفعّالة تلبي احتياجات عملائها وتساعدهم في تحقيق أهدافهم. نلتزم في ' ماني' بالاحترافية العالية والسرية التامة، ونسعى دائماً إلى تقديم بفضل الخدمات القانونية التي تدعم عملاءنا في مواجهة التحديات القانونية المتغيرة.";
 const shortText_sm_en = "Mani Law Firm was established in with the aim of providing comprehensive legal services that keep pace with local and international legal developments. Over the past years, the firm has built a strong reputation as a trusted partner for clients across various sectors.."
 const fullText_sm_en =  "Mani Law Firm was established in with the aim of providing comprehensive legal services that keep pace with local and international legal developments. Over the past years, the firm has built a strong reputation as a trusted partner for clients across various sectors, including large corporations, individuals, and government institutions. With a team of highly experienced lawyers, whose expertise spans years in various legal fields, Mani has distinguished itself by offering innovative and effective legal solutions that meet clients' needs and help them achieve their goals. At Mani, we are committed to the highest standards of professionalism and confidentiality, always striving to provide the best legal services that support our clients in facing evolving legal challenges.";
-
-
 // update botton more and less read 
 function updateText(isExpanded) {
     const storedLanguage = localStorage.getItem("language");
@@ -272,19 +253,16 @@ function updateText(isExpanded) {
     txt.innerHTML = isExpanded ? fullText : shortText;
     toggleBtn_1.innerHTML = isExpanded ? (storedLanguage === "ar" ? "عرض أقل" : "Show Less") : (storedLanguage === "ar" ? "أقرأ المزيد" : "Read More");
 }
-
 // Restore expansion state from local storage
 const isExpandedStored = localStorage.getItem("isExpanded") === "true";
 let isExpanded = isExpandedStored; 
 updateText(isExpanded);
-
 //Handle the button press event to change the text state
 toggleBtn_1.addEventListener("click", () => {
     isExpanded = !isExpanded;
     localStorage.setItem("isExpanded", isExpanded);
     updateText(isExpanded);
 });
-
 // Update text when page loads
 document.addEventListener("DOMContentLoaded", () => {
     function showTxt() {
@@ -297,7 +275,6 @@ document.addEventListener("DOMContentLoaded", () => {
         updateText(isExpanded);
     });
 });
-
 document.addEventListener("DOMContentLoaded", () => {
     const articles = document.querySelectorAll(".service .content .row article");
     function updateArticleHeight() {
@@ -370,7 +347,6 @@ function setArticleMinHeight() {
         }
     });
 }
-
 // add class en in body if language is stored is en 
 document.addEventListener("DOMContentLoaded", () => {
     // get  the LANGUAGE is stored
@@ -398,12 +374,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
-
-
-
 // update offcanvasElement directino when cgange language 
-
 document.addEventListener("DOMContentLoaded", () => {
     // Update Offcanvas direction based on language
     function updateOffcanvasDirection() {
@@ -424,7 +395,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateOffcanvasDirection();
 
     // Handling language changes
-    const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic, .btn-en, .btn-ar");
+    const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic");
     languageSelectors.forEach(selector => {
         selector.addEventListener("click", (event) => {
             const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
@@ -486,7 +457,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Call the function to set the direction when the page loads
     updateSlick();
     // Update direction when changing language
-    const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic, .btn-en, .btn-ar");
+    const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic");
     languageSelectors.forEach(selector => {
         selector.addEventListener("click", (event) => {
             const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
@@ -557,7 +528,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
 document.addEventListener("DOMContentLoaded", () => {
     const imgElement = document.getElementById("dynamic-img");
     const menuIcon = document.getElementById("menu-icon");
