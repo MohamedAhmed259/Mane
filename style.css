@@ -129,8 +129,8 @@ header .navbar .container #bot1 #talk-us{
     /* عندما تكون اللغة إنجليزية */
 
     body.en header .d-flex p {
-        width: 98%;
-        font-size: 14px ;
+        width: 93%;
+        font-size: 15px !important;
     }
 
     body.en header .txt {
@@ -165,7 +165,7 @@ header .txt a{
     header .d-flex p{
         /* margin-top: 3rem !important; */
         color: white;
-        width: 80% !important;
+        width: 70.5% !important;
         font-size: 42px !important;
     }
 }
@@ -173,7 +173,7 @@ header .txt a{
     header .d-flex p{
         margin-top: 3rem;
         color: white;
-        width: 85% ;
+        width: 70% ;
         font-size: 30px;
     }
 }
