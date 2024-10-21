@@ -477,39 +477,145 @@ document.addEventListener("DOMContentLoaded", () => {
 // });
 
 
-$('.responsive').slick({
-    dots: true,
-    autoplay: true,
-    autoplaySpeed:100,
-    arrows: true,
-    infinite: true,
-    speed: 100,
-    slidesToShow: 4,
-    slidesToScroll: 2,
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-            slidesToShow: 5,
-            slidesToScroll: 1
-            }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const responsiveCustoms = $('.responsive');
+
+    // دالة لتعيين الاتجاه وتحديث السليك
+    function updateSlick() {
+        const storedLanguage = localStorage.getItem("language");
+
+        // تغيير الاتجاه بناءً على اللغة
+        const direction = storedLanguage === "ar" ? 'rtl' : 'ltr';
+        
+        // تحقق مما إذا كان الـ Slick قد تم تهيئته
+        if (responsiveCustoms.hasClass('slick-initialized')) {
+            responsiveCustoms.slick('unslick'); // تدمير السليك فقط إذا تم تهيئته
         }
-    ]
+
+        // إعادة تهيئة السليك مع الاتجاه الجديد
+        responsiveCustoms.slick({
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 800,
+            
+            arrows: true,
+            infinite: true,
+            speed: 800,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            cssEase: 'linear',
+            rtl: direction === 'rtl', // تعيين الاتجاه هنا
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+        });
+    }
+
+    // استدعاء الدالة لتعيين الاتجاه عند تحميل الصفحة
+    updateSlick();
+
+    // تحديث الاتجاه عند تغيير اللغة
+    const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic, .btn-en, .btn-ar");
+    languageSelectors.forEach(selector => {
+        selector.addEventListener("click", (event) => {
+            const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
+            setLanguage(language);
+            localStorage.setItem("language", language);
+            updateSlick(); // تحديث الاتجاه وإعادة تهيئة السليك
+        });
+    });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const responsiveCustoms = $('.responsive-customs');
+
+    // دالة لتعيين الاتجاه وتحديث السليك
+    function updateSlick() {
+        const storedLanguage = localStorage.getItem("language");
+
+        // تغيير الاتجاه بناءً على اللغة
+        const direction = storedLanguage === "ar" ? 'rtl' : 'ltr';
+        
+        // تحقق مما إذا كان الـ Slick قد تم تهيئته
+        if (responsiveCustoms.hasClass('slick-initialized')) {
+            responsiveCustoms.slick('unslick'); // تدمير السليك فقط إذا تم تهيئته
+        }
+
+        // إعادة تهيئة السليك مع الاتجاه الجديد
+        responsiveCustoms.slick({
+            // dots: true,
+            autoplay: true,
+            autoplaySpeed: 500,
+            arrows: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 9,
+            slidesToScroll: 1,
+            cssEase: 'linear',
+            rtl: direction === 'rtl', // تعيين الاتجاه هنا
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 8,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 6,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+        });
+    }
+
+    // استدعاء الدالة لتعيين الاتجاه عند تحميل الصفحة
+    updateSlick();
+
+    // تحديث الاتجاه عند تغيير اللغة
+    const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic, .btn-en, .btn-ar");
+    languageSelectors.forEach(selector => {
+        selector.addEventListener("click", (event) => {
+            const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
+            setLanguage(language);
+            localStorage.setItem("language", language);
+            updateSlick(); // تحديث الاتجاه وإعادة تهيئة السليك
+        });
+    });
+});
+
+
+
 
 // direction of swiper 
 // document.addEventListener("DOMContentLoaded", () => {

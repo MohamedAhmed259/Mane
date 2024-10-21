@@ -319,9 +319,7 @@ nav a:hover {
 .service .swiper .mySwiper swiper-slide{
     min-height: 300px !important;
 }
-.owl-carousel .owl-item img{
-    width: 80px !important;
-}
+
 .service .swiper article{
     /* min-height: 90% !important; */
     min-height: 240px;
@@ -330,6 +328,7 @@ nav a:hover {
     min-height: 260px;
     margin-bottom: 20px;
 }
+
 .service  article{
     font-size: 14px;
     border-radius: 0.25rem;
@@ -376,7 +375,7 @@ nav a:hover {
     }
 }
 @media (min-width: 768px) {
-    .service .content .owl-carousel{
+    .service .content .responsive{
         display: none;
     }
 }
