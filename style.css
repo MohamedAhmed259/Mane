@@ -234,6 +234,7 @@ header .txt a{
         width: 66% ;
         padding-left: 0!important;
         padding-right: 0!important;
+        margin-top: 16px !important;
         margin-bottom: 24px !important;
     }
     body.en header .d-flex p{
