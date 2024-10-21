@@ -102,6 +102,11 @@ header .navbar .container #bot1 .btn-g{
 header .navbar .container #bot1 #talk-us{
     border: 1px solid white;
     color: white;
+    margin-right: 20px;
+}
+
+body.en header .navbar .container #bot1 #talk-us{
+    margin-left: 20px;
 }
 .offcanvas {
     width: 250px; /* Adjust the width as needed */
@@ -159,24 +164,38 @@ header .txt a{
     .navbar .container .image2{
         display: none !important;
     }
+    header .d-flex p{
+        color: white;
+        width: 100% ;
+        font-size: 30px;
+        margin-bottom: 24px !important;
+        font-size: 62px;
+    }
+    body.en header .d-flex p{
+        color: white;
+        width: 100% ;
+        font-size: 30px;
+        font-size: 42px;
+        margin-bottom: 24px !important;
+    }
 
 }
-@media (min-width: 992px) {
+@media (min-width: 767px) and (max-width:991px) {
     header .d-flex p{
-        /* margin-top: 3rem !important; */
         color: white;
-        width: 70.5% !important;
-        font-size: 42px !important;
+        width: 73% ;
+        font-size: 30px;
+        margin-bottom: 24px !important;
     }
 }
-@media (min-width: 767px) {
-    header .d-flex p{
-        margin-top: 3rem;
+@media (min-width: 767px) and (max-width:991px) {
+    body.en header .d-flex p{
         color: white;
-        width: 70% ;
+        width: 93% ;
         font-size: 30px;
     }
 }
+
 /* md screen */
 @media (max-width: 992px) {
     header{
@@ -211,10 +230,19 @@ header .txt a{
     } */
     header .d-flex p{
         color: white;
-        font-size: 14px !important;
-        width: 80% ;
+        font-size: 18px !important;
+        width: 66% ;
         padding-left: 0!important;
         padding-right: 0!important;
+        margin-bottom: 24px !important;
+    }
+    body.en header .d-flex p{
+        color: white;
+        font-size: 19.86px !important;
+        width: 99% ;
+        padding-left: 0!important;
+        padding-right: 0!important;
+        margin-top: 16px !important;
     }
     header .d-flex a{
         font-size: 14px !important;
@@ -228,9 +256,9 @@ header .txt a{
         padding: 5px 10px !important;
         font-size: 12px;
     }
-    .navbar .container #bot1 img{
+    /* .navbar .container #bot1 img{
         margin: 0 !important;
-    }
+    } */
 }
 header nav div ul li a{
     color: white !important;
