@@ -330,18 +330,18 @@ document.addEventListener("DOMContentLoaded", () => {
             if (storedLanguage === "ar") {
                 if (screenWidth >= 992) {
                     // الشاشات الكبيرة باللغة العربية
-                    article.style.height = "200px";
+                    article.style.minHeight = "210px";
                 } else if (screenWidth >= 768 && screenWidth < 992) {
                     // الشاشات المتوسطة باللغة العربية
-                    article.style.height = "180px";
+                    article.style.minHeight = "190px";
                 }
             } else {
                 if (screenWidth >= 992) {
                     // الشاشات الكبيرة باللغة الإنجليزية
-                    article.style.height = "245px";
+                    article.style.minHeight = "245px";
                 } else if (screenWidth >= 768 && screenWidth < 992) {
                     // الشاشات المتوسطة باللغة الإنجليزية
-                    article.style.height = "180px";
+                    article.style.minHeight = "185px";
                 }
             }
         });
@@ -361,6 +361,48 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const articleElements = document.querySelectorAll('.responsive article');
+
+    function updateArticleHeight() {
+        const storedLanguage = localStorage.getItem("language");
+
+        articleElements.forEach(article => {
+            if (storedLanguage === "ar") {
+                article.style.minHeight = '200px'; // تعيين الحد الأدنى للارتفاع إلى 180px عند اللغة العربية
+            } else {
+                article.style.minHeight = '240px'; // تعيين الحد الأدنى للارتفاع إلى 200px عند اللغة الإنجليزية
+            }
+        });
+    }
+
+    // استدعاء الدالة عند تحميل الصفحة
+    updateArticleHeight();
+
+    // تحديث الارتفاع عند تغيير حجم النافذة
+    window.addEventListener("resize", updateArticleHeight);
+
+    // تحديث الارتفاع عند تغيير اللغة
+    const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic");
+    languageSelectors.forEach(selector => {
+        selector.addEventListener("click", () => {
+            updateArticleHeight();
+        });
+    });
+});
+
+function setArticleMinHeight() {
+    const storedLanguage = localStorage.getItem("language");
+    const articleElements = document.querySelectorAll('.responsive article');
+
+    articleElements.forEach(article => {
+        if (storedLanguage === "ar") {
+            article.style.minHeight = '180px'; // تعيين الحد الأدنى للارتفاع إلى 180px عند اللغة العربية
+        } else {
+            article.style.minHeight = '200px'; // تعيين الحد الأدنى للارتفاع إلى 200px عند اللغة الإنجليزية
+        }
+    });
+}
 
 
 
@@ -565,9 +607,9 @@ document.addEventListener("DOMContentLoaded", () => {
             // dots: true,
             arrows: false,
             autoplay: true,
-            autoplaySpeed: 500,
+            autoplaySpeed: 0,
             infinite: true,
-            speed: 500,
+            speed: 600,
             slidesToShow: 9,
             slidesToScroll: 1,
             cssEase: 'linear',
