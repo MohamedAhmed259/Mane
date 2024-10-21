@@ -242,7 +242,9 @@ header .txt a{
         width: 99% ;
         padding-left: 0!important;
         padding-right: 0!important;
+        padding-bottom: 0!important;
         margin-top: 16px !important;
+        margin-bottom: 16px !important;
     }
     header .d-flex a{
         font-size: 14px !important;
