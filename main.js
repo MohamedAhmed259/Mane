@@ -438,78 +438,146 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// initialize owl-carousel
+// $('.btn-en-glish, .btn-ar-abic').on('click', function() {
+//     const language = $(this).data('attr') === "language-ar" ? "ar" : "en";
+//     localStorage.setItem("language", language);
+//     $('.owl-carousel').trigger('destroy.owl.carousel'); // Destroy the current instance
+//     initializeOwlCarousel(); // Reinitialize with updated settings
+// });
+// function initializeOwlCarousel() {
+//     const isRtl = localStorage.getItem("language") === "ar";
+
+//     $('.owl-carousel').owlCarousel({
+//         loop: true,
+//         margin: 30,
+//         nav: false,
+//         dots: false,
+//         // autoplay: true,
+//         // autoplayTimeout: 1000,
+//         rtl: isRtl,
+//         responsive: {
+//             0: {
+//                 items: 1
+//             },
+//             600: {
+//                 items: 1
+//             },
+//             960: {
+//                 items: 1
+//             },
+//             1200: {
+//                 items: 1
+//             }
+//         }
+//     });
+// }
+// $(document).ready(function() {
+//     initializeOwlCarousel();
+// });
 
 
+$('.responsive').slick({
+    dots: true,
+    // autoplay: true,
+    // autoplaySpeed:1000,
+    arrows: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+            }
+        }
+    ]
+});
 
 // direction of swiper 
-document.addEventListener("DOMContentLoaded", () => {
-    const swiperEl = document.getElementById("service-swiper");
+// document.addEventListener("DOMContentLoaded", () => {
+//     const swiperEl = document.getElementById("service-swiper");
 
-    function dirSwiper() {
-        const storedLanguage = localStorage.getItem("language");
-        const direction = storedLanguage === "ar" ? "rtl" : "ltr";
+//     function dirSwiper() {
+//         const storedLanguage = localStorage.getItem("language");
+//         const direction = storedLanguage === "ar" ? "rtl" : "ltr";
 
-        const currentSlide = swiperEl.swiper?.activeIndex || 0;
+//         const currentSlide = swiperEl.swiper?.activeIndex || 0;
 
-        swiperEl.setAttribute("dir", direction);
+//         swiperEl.setAttribute("dir", direction);
 
-        const parent = swiperEl.parentNode;
-        parent.removeChild(swiperEl);
-        parent.appendChild(swiperEl);
+//         const parent = swiperEl.parentNode;
+//         parent.removeChild(swiperEl);
+//         parent.appendChild(swiperEl);
 
-        swiperEl.addEventListener('ready', () => {
-            swiperEl.swiper.slideTo(currentSlide);
-        });
-    }
+//         swiperEl.addEventListener('ready', () => {
+//             swiperEl.swiper.slideTo(currentSlide);
+//         });
+//     }
 
-    dirSwiper();
+//     dirSwiper();
 
-    const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic, .btn-en, .btn-ar");
-    languageSelectors.forEach(selector => {
-        selector.addEventListener("click", (event) => {
-            const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
-            setLanguage(language);
-            localStorage.setItem("language", language);
-            dirSwiper();
-        });
-    });
-});
+//     const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic, .btn-en, .btn-ar");
+//     languageSelectors.forEach(selector => {
+//         selector.addEventListener("click", (event) => {
+//             const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
+//             setLanguage(language);
+//             localStorage.setItem("language", language);
+//             dirSwiper();
+//         });
+//     });
+// });
 // direction of custom swiper 
 
+// document.addEventListener("DOMContentLoaded", () => {
+//     const swiperEl = document.getElementById("customs-swiper");
 
+//     function dirSwiper() {
+//         const storedLanguage = localStorage.getItem("language");
+//         const direction = storedLanguage === "ar" ? "rtl" : "ltr";
 
-document.addEventListener("DOMContentLoaded", () => {
-    const swiperEl = document.getElementById("customs-swiper");
+//         const currentSlide = swiperEl.swiper?.activeIndex || 0;
 
-    function dirSwiper() {
-        const storedLanguage = localStorage.getItem("language");
-        const direction = storedLanguage === "ar" ? "rtl" : "ltr";
+//         swiperEl.setAttribute("dir", direction);
 
-        const currentSlide = swiperEl.swiper?.activeIndex || 0;
+//         const parent = swiperEl.parentNode;
+//         parent.removeChild(swiperEl);
+//         parent.appendChild(swiperEl);
 
-        swiperEl.setAttribute("dir", direction);
+//         swiperEl.addEventListener('ready', () => {
+//             swiperEl.swiper.slideTo(currentSlide);
+//         });
+//     }
 
-        const parent = swiperEl.parentNode;
-        parent.removeChild(swiperEl);
-        parent.appendChild(swiperEl);
+//     dirSwiper();
 
-        swiperEl.addEventListener('ready', () => {
-            swiperEl.swiper.slideTo(currentSlide);
-        });
-    }
-
-    dirSwiper();
-
-    const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic, .btn-en, .btn-ar");
-    languageSelectors.forEach(selector => {
-        selector.addEventListener("click", (event) => {
-            const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
-            setLanguage(language);
-            localStorage.setItem("language", language);
-            dirSwiper();
-        });
-    });
-});
+//     const languageSelectors = document.querySelectorAll(".btn-en-glish, .btn-ar-abic, .btn-en, .btn-ar");
+//     languageSelectors.forEach(selector => {
+//         selector.addEventListener("click", (event) => {
+//             const language = event.target.dataset.attr === "language-ar" ? "ar" : "en";
+//             setLanguage(language);
+//             localStorage.setItem("language", language);
+//             dirSwiper();
+//         });
+//     });
+// });
 
 
 // direction of  custom swiper 
