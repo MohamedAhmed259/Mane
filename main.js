@@ -161,6 +161,39 @@ const translations = {
         "copyright": "All rights reserved &copy; 2024",
     }
 };
+document.querySelectorAll('.navbar-nav a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+
+        if (targetId.startsWith('#')) {
+            e.preventDefault();
+
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+
+                const offcanvasElement = document.querySelector('#offcanvasNavbar');
+                const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvasElement);
+                if (offcanvasInstance) {
+                    offcanvasInstance.hide(); 
+                }
+                
+                setTimeout(() => {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 350); 
+            }
+        }
+    });
+});
+
+
 // preparing the localStorage 
 document.addEventListener("DOMContentLoaded", () => {
     const storedLanguage = localStorage.getItem("language");
