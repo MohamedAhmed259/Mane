@@ -171,10 +171,10 @@ document.querySelectorAll('.navbar-nav a').forEach(function(link) {
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                // targetElement.scrollIntoView({
+                //     behavior: 'smooth',
+                //     block: 'start'
+                // });
 
                 const offcanvasElement = document.querySelector('#offcanvasNavbar');
                 const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvasElement);
