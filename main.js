@@ -201,9 +201,11 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("language", "ar");
     }
     const language = localStorage.getItem("language");
+    console.log("Default language is: ", language);
     setLanguage(language); 
     updateDisplay();
 });
+// FUN TRANSLATION 
 const setLanguage = (language) => {
     const elements = document.querySelectorAll("[data-attr]");
     elements.forEach((element) => {
@@ -243,7 +245,7 @@ languageSelectors.forEach(selector => {
         updateDisplay();
     });
 });
-// updaate display the current language based on the current window resize
+// updaate display the current word of language based on the current window resize
 window.addEventListener("resize", updateDisplay);
 // toggle display txt
 const txt = document.querySelector(".who .row .info-company .txt");
@@ -264,6 +266,8 @@ const fullText_sm_ar = "تأسست شركة 'ماني للمحاماة' عام 1
 const shortText_sm_en = "Mani Law Firm was established in with the aim of providing comprehensive legal services that keep pace with local and international legal developments. Over the past years, the firm has built a strong reputation as a trusted partner for clients across various sectors.."
 const fullText_sm_en =  "Mani Law Firm was established in with the aim of providing comprehensive legal services that keep pace with local and international legal developments. Over the past years, the firm has built a strong reputation as a trusted partner for clients across various sectors, including large corporations, individuals, and government institutions. With a team of highly experienced lawyers, whose expertise spans years in various legal fields, Mani has distinguished itself by offering innovative and effective legal solutions that meet clients' needs and help them achieve their goals. At Mani, we are committed to the highest standards of professionalism and confidentiality, always striving to provide the best legal services that support our clients in facing evolving legal challenges.";
 // update botton more and less read 
+const isExpandedStored = localStorage.getItem("isExpanded") === "true";
+let isExpanded = isExpandedStored; 
 function updateText(isExpanded) {
     const storedLanguage = localStorage.getItem("language");
     const width = window.innerWidth;
@@ -286,8 +290,6 @@ function updateText(isExpanded) {
     toggleBtn_1.innerHTML = isExpanded ? (storedLanguage === "ar" ? "عرض أقل" : "Show Less") : (storedLanguage === "ar" ? "أقرأ المزيد" : "Read More");
 }
 // Restore expansion state from local storage
-const isExpandedStored = localStorage.getItem("isExpanded") === "true";
-let isExpanded = isExpandedStored; 
 updateText(isExpanded);
 //Handle the button press event to change the text state
 toggleBtn_1.addEventListener("click", () => {
@@ -368,17 +370,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-function setArticleMinHeight() {
-    const storedLanguage = localStorage.getItem("language");
-    const articleElements = document.querySelectorAll('.responsive article');
-    articleElements.forEach(article => {
-        if (storedLanguage === "ar") {
-            article.style.minHeight = '180px';
-        } else {
-            article.style.minHeight = '200px';
-        }
-    });
-}
+
 // add class en in body if language is stored is en 
 document.addEventListener("DOMContentLoaded", () => {
     // get  the LANGUAGE is stored
